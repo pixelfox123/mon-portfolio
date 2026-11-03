@@ -1,69 +1,264 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mon Portfolio | TSSR & Cybersécurité</title>
+    <meta name="description"
+          content="ITnéraire : découvrez mon parcours, mes projets et mon laboratoire informatique.">
+
+    <title>ITnéraire | Accueil</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <h2>CyberPortfolio</h2>
+    <!-- ========================= -->
+    <!-- MENU DE NAVIGATION -->
+    <!-- ========================= -->
 
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#parcours">Parcours</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#veille">Veille technologique</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">⌨</span>
+            <span class="logo-text"><strong>IT</strong>néraire</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navigation principale">
+
+            <a href="index.html" class="active">
+                ⌂ Accueil
+            </a>
+
+            <a href="pages/parcours.html">
+                ♙ Mon parcours
+            </a>
+
+            <a href="pages/projets.html">
+                &lt;/&gt; Mes projets
+            </a>
+
+            <a href="pages/laboratoire.html">
+                ▤ Mon laboratoire
+            </a>
+
+            <a href="pages/veille.html">
+                ◉ Veille technologique
+            </a>
+
+            <a href="pages/contact.html">
+                ✉ Contact
+            </a>
+
         </nav>
+
     </header>
 
+
+    <!-- ========================= -->
+    <!-- PAGE DE GARDE -->
+    <!-- ========================= -->
+
     <main>
-        <section id="accueil">
-            <h1>Bienvenue sur mon ITnéraire</h1>
 
-            <p>
-                Actuellement en formation Technicien Supérieur
-                Systèmes et Réseaux (TSSR), je développe mes
-                compétences en administration systèmes,
-                réseaux et cybersécurité.
-            </p>
+        <section class="hero">
 
-            <a href="#projets">Découvrir mes projets</a>
+            <!-- Effets décoratifs -->
+            <div class="hero-glow hero-glow-left"></div>
+            <div class="hero-glow hero-glow-right"></div>
+
+            <div class="hero-content">
+
+                <!-- Grand titre -->
+                <h1 class="hero-title">
+                    <span>IT</span>néraire
+                </h1>
+
+                <!-- Sous-titre -->
+                <p class="hero-subtitle">
+                    Mon parcours dans l'univers informatique.
+                </p>
+
+                <!-- Formation -->
+                <div class="formation-badge">
+                    <span class="badge-icon">🎓</span>
+
+                    <span>
+                        Technicienne Supérieure Systèmes et Réseaux
+                        en formation
+                    </span>
+                </div>
+
+                <!-- Présentation -->
+                <p class="hero-description">
+
+                    Étudiante passionnée par les systèmes, les réseaux
+                    et la cybersécurité,
+
+                    <br>
+
+                    je partage ici mon parcours, mes projets,
+                    mon laboratoire et ma veille technologique.
+
+                    <br>
+
+                    Mon objectif : approfondir mes compétences
+                    et évoluer vers le domaine de la cybersécurité.
+
+                </p>
+
+                <!-- Boutons interactifs -->
+                <div class="hero-buttons">
+
+                    <a href="pages/parcours.html"
+                       class="btn btn-primary">
+
+                        <span>🚀</span>
+                        Découvrir mon parcours
+                        <span>→</span>
+
+                    </a>
+
+                    <a href="pages/projets.html"
+                       class="btn btn-secondary">
+
+                        <span>⌘</span>
+                        Explorer mes projets
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section id="parcours">
-            <h2>Mon parcours</h2>
-            <p>Découvrez mon parcours et mes formations.</p>
+
+        <!-- ========================= -->
+        <!-- LES SIX RUBRIQUES -->
+        <!-- ========================= -->
+
+        <section class="rubriques">
+
+            <div class="cards-container">
+
+                <!-- ACCUEIL -->
+                <a href="index.html" class="card cyan">
+
+                    <div class="card-icon">⌂</div>
+
+                    <h2>Accueil</h2>
+
+                    <p>
+                        Présentation du site
+                        et introduction
+                    </p>
+
+                </a>
+
+
+                <!-- MON PARCOURS -->
+                <a href="pages/parcours.html" class="card purple">
+
+                    <div class="card-icon">♙</div>
+
+                    <h2>Mon parcours</h2>
+
+                    <p>
+                        BTS SIO SISR, TSSR
+                        et mes objectifs
+                    </p>
+
+                </a>
+
+
+                <!-- MES PROJETS -->
+                <a href="pages/projets.html" class="card cyan">
+
+                    <div class="card-icon">&lt;/&gt;</div>
+
+                    <h2>Mes projets</h2>
+
+                    <p>
+                        TP, réalisations
+                        et captures d'écran
+                    </p>
+
+                </a>
+
+
+                <!-- MON LABORATOIRE -->
+                <a href="pages/laboratoire.html" class="card purple">
+
+                    <div class="card-icon">▤</div>
+
+                    <h2>Mon laboratoire</h2>
+
+                    <p>
+                        Machines virtuelles,
+                        Windows Server,
+                        Linux et réseaux
+                    </p>
+
+                </a>
+
+
+                <!-- VEILLE TECHNOLOGIQUE -->
+                <a href="pages/veille.html" class="card cyan">
+
+                    <div class="card-icon">◉</div>
+
+                    <h2>Veille technologique</h2>
+
+                    <p>
+                        Actualités et
+                        découvertes informatiques
+                    </p>
+
+                </a>
+
+
+                <!-- CONTACT -->
+                <a href="pages/contact.html" class="card purple">
+
+                    <div class="card-icon">✉</div>
+
+                    <h2>Contact</h2>
+
+                    <p>
+                        GitHub, LinkedIn
+                        et coordonnées
+                        professionnelles
+                    </p>
+
+                </a>
+
+            </div>
+
         </section>
 
-        <section id="projets">
-            <h2>Mes projets et TP</h2>
-            <p>Retrouvez mes réalisations techniques.</p>
-        </section>
-
-        <section id="veille">
-            <h2>Veille technologique</h2>
-            <p>Mes recherches sur l'informatique et la cybersécurité.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Mes coordonnées professionnelles seront disponibles ici.</p>
-        </section>
     </main>
 
-    <footer>
-        <p>© 2026 - Mon Portfolio Informatique</p>
+
+    <!-- ========================= -->
+    <!-- PIED DE PAGE -->
+    <!-- ========================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 ITnéraire —
+            Mon parcours dans l'univers informatique.
+        </p>
+
     </footer>
 
+
+    <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>
+
 </body>
 </html>
