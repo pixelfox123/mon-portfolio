@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -68,23 +69,52 @@
         .veille-card a:hover {
             text-decoration: underline;
         }
-
-        .retour {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #00eaff;
-            text-decoration: none;
-        }
     </style>
 </head>
 
 <body>
 
-    <main class="veille-page">
+    <!-- BARRE DE NAVIGATION -->
+    <header class="navbar">
 
-        <a class="retour" href="../index.html">
-            ← Retour à l'accueil
+        <a href="../index.html" class="logo">
+            <i data-lucide="monitor-code"></i>
+            <span class="logo-text">
+                <strong>IT</strong>néraire
+            </span>
         </a>
+
+        <nav class="nav-links">
+
+            <a href="../index.html">
+                <i data-lucide="house"></i> Accueil
+            </a>
+
+            <a href="parcours.html">
+                <i data-lucide="user-round"></i> Mon parcours
+            </a>
+
+            <a href="projets.html">
+                <i data-lucide="code-xml"></i> Mes projets
+            </a>
+
+            <a href="laboratoire.html">
+                <i data-lucide="server"></i> Mon laboratoire
+            </a>
+
+            <a href="veille.html" class="active">
+                <i data-lucide="shield-check"></i> Veille
+            </a>
+
+            <a href="contact.html">
+                <i data-lucide="mail"></i> Contact
+            </a>
+
+        </nav>
+    </header>
+
+    <!-- CONTENU DE LA PAGE -->
+    <main class="veille-page">
 
         <h1>🔐 Veille technologique</h1>
 
@@ -151,6 +181,14 @@
         </div>
 
     </main>
+
+    <!-- ICÔNES LUCIDE -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
 
 </body>
 </html>

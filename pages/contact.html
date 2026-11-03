@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ITnéraire</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .page-contact {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 65px 25px 90px;
+        }
+
+        .page-contact h1 {
+            color: #00eaff;
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .contact-intro {
+            color: #cbd5e1;
+            text-align: center;
+            line-height: 1.8;
+            margin-bottom: 45px;
+        }
+
+        .contact-card {
+            background: rgba(7, 19, 40, 0.92);
+            border: 1px solid rgba(0, 234, 255, 0.35);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 0 25px rgba(0, 234, 255, 0.08);
+            text-align: center;
+        }
+
+        .contact-card h2 {
+            color: #a855f7;
+            margin-bottom: 18px;
+        }
+
+        .contact-card p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 20px;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(0, 234, 255, 0.05);
+            border: 1px solid #00eaff;
+            border-radius: 12px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .contact-link:hover {
+            background: rgba(0, 234, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .contact-link svg {
+            width: 19px;
+            height: 19px;
+            color: #00eaff;
+        }
+
+        .contact-footer {
+            margin-top: 35px;
+            color: #94a3b8;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="../index.html" class="logo">
+            <i data-lucide="monitor-code"></i>
+            <span class="logo-text"><strong>IT</strong>néraire</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="../index.html">
+                <i data-lucide="house"></i> Accueil
+            </a>
+
+            <a href="parcours.html">
+                <i data-lucide="user-round"></i> Mon parcours
+            </a>
+
+            <a href="projets.html">
+                <i data-lucide="code-xml"></i> Mes projets
+            </a>
+
+            <a href="laboratoire.html">
+                <i data-lucide="server"></i> Mon laboratoire
+            </a>
+
+            <a href="veille.html">
+                <i data-lucide="shield-check"></i> Veille
+            </a>
+
+            <a href="contact.html" class="active">
+                <i data-lucide="mail"></i> Contact
+            </a>
+        </nav>
+    </header>
+
+    <main class="page-contact">
+
+        <h1>Contact</h1>
+
+        <p class="contact-intro">
+            Une question, une opportunité professionnelle
+            ou simplement envie d'échanger autour
+            de l'informatique et de la cybersécurité ?
+        </p>
+
+        <section class="contact-card">
+
+            <h2>Restons en contact !</h2>
+
+            <p>
+                Je suis Salma COMA, actuellement
+                en formation de Technicienne Supérieure
+                Systèmes et Réseaux.
+                Vous pouvez me retrouver sur GitHub
+                pour découvrir mes réalisations.
+            </p>
+
+            <div class="contact-links">
+
+                <a
+                    href="https://github.com/pixelfox123"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+                    <i data-lucide="github"></i>
+                    Mon GitHub
+                </a>
+
+            </div>
+
+        </section>
+
+        <p class="contact-footer">
+            D'autres moyens de contact seront ajoutés prochainement.
+        </p>
+
+    </main>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>

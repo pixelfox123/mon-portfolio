@@ -580,3 +580,275 @@ a {
     }
 
 }
+
+/* ===== NOUVELLE PAGE D'ACCUEIL ===== */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-name {
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    margin: 25px 0 18px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.25);
+}
+
+.hero-subtitle {
+    color: #ffffff;
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 45px;
+}
+
+/* Trois boutons harmonisés */
+
+.hero-buttons .btn {
+    background: rgba(3, 8, 23, 0.88);
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 16px 26px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.hero-buttons .btn-primary {
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 18px rgba(0,234,255,0.35);
+}
+
+.hero-buttons .btn-secondary {
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 18px rgba(168,85,247,0.35);
+}
+
+.hero-buttons .btn-veille {
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 18px rgba(0,234,255,0.35);
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-5px);
+    background: rgba(12, 27, 55, 0.95);
+}
+
+.hero-buttons .btn-primary:hover,
+.hero-buttons .btn-veille:hover {
+    box-shadow: 0 0 28px rgba(0,234,255,0.7);
+}
+
+.hero-buttons .btn-secondary:hover {
+    box-shadow: 0 0 28px rgba(168,85,247,0.7);
+}
+
+@media (max-width: 650px) {
+    .hero-buttons {
+        gap: 14px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 330px;
+        text-align: center;
+    }
+}
+
+
+/* ===== FOND FUTURISTE ITNÉRAIRE ===== */
+
+.hero {
+    background-image:
+        linear-gradient(
+            rgba(3, 8, 23, 0.12),
+            rgba(3, 8, 23, 0.22)
+        ),
+        url("../images/fond-itneraire.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== DÉTAILS NÉON ITNÉRAIRE ===== */
+
+/* Petit trait lumineux sous le grand titre */
+.hero-title::after {
+    content: "";
+    display: block;
+    width: 220px;
+    max-width: 60%;
+    height: 3px;
+    margin: 16px auto 0;
+    border-radius: 50px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #00eaff,
+        transparent
+    );
+    box-shadow: 0 0 15px #00eaff;
+}
+
+/* Petits traits lumineux de chaque côté du message */
+.hero-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-subtitle::before,
+.hero-subtitle::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    border-radius: 20px;
+    background: #a855f7;
+    box-shadow: 0 0 12px #a855f7;
+}
+
+/* Ligne lumineuse sous le message */
+.hero-name::before {
+    content: "";
+    display: block;
+    width: 170px;
+    height: 2px;
+    margin: 0 auto 24px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #00eaff,
+        transparent
+    );
+    box-shadow: 0 0 12px #00eaff;
+}
+
+/* Néon sous la barre de navigation */
+.navbar {
+    border-bottom: 1px solid rgba(0, 234, 255, 0.5);
+    box-shadow: 0 3px 18px rgba(0, 234, 255, 0.12);
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 650px) {
+    .hero-subtitle {
+        gap: 8px;
+    }
+
+    .hero-subtitle::before,
+    .hero-subtitle::after {
+        width: 20px;
+        flex-shrink: 0;
+    }
+}
+
+
+/* ===== ICÔNES DE NAVIGATION ===== */
+
+.nav-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-links svg {
+    width: 16px;
+    height: 16px;
+    color: #ffffff;
+    stroke-width: 2;
+}
+
+.nav-links a.active svg,
+.nav-links a:hover svg {
+    color: #00eaff;
+}
+
+
+.nav-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-links svg {
+    width: 17px;
+    height: 17px;
+    color: white;
+    stroke-width: 2;
+    flex-shrink: 0;
+}
+
+.nav-links a.active svg,
+.nav-links a:hover svg {
+    color: #00eaff;
+}
+
+/* ===== LOGO ET ICÔNES BLANCHES ===== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navbar .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .logo svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+    stroke-width: 2;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.nav-links svg {
+    width: 17px;
+    height: 17px;
+    color: white;
+    stroke-width: 2;
+    flex-shrink: 0;
+}
+
+.nav-links a.active svg,
+.nav-links a:hover svg {
+    color: #00eaff;
+}

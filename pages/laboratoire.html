@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon laboratoire | ITnéraire</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .page-labo {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 65px 25px 90px;
+        }
+
+        .page-labo h1 {
+            color: #00eaff;
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .labo-intro {
+            color: #cbd5e1;
+            text-align: center;
+            line-height: 1.8;
+            margin-bottom: 45px;
+        }
+
+        .labo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .labo-card {
+            background: rgba(7, 19, 40, 0.92);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            border-radius: 18px;
+            padding: 30px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .labo-card:hover {
+            transform: translateY(-5px);
+            border-color: #00eaff;
+        }
+
+        .labo-card svg {
+            width: 38px;
+            height: 38px;
+            color: #00eaff;
+            margin-bottom: 15px;
+        }
+
+        .labo-card h2 {
+            color: #a855f7;
+            margin-bottom: 15px;
+        }
+
+        .labo-card p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .labo-note {
+            margin-top: 35px;
+            padding: 25px;
+            text-align: center;
+            background: rgba(0, 234, 255, 0.05);
+            border: 1px dashed rgba(0, 234, 255, 0.4);
+            border-radius: 16px;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 750px) {
+            .labo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="../index.html" class="logo">
+            <i data-lucide="monitor-code"></i>
+            <span class="logo-text"><strong>IT</strong>néraire</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="../index.html">
+                <i data-lucide="house"></i> Accueil
+            </a>
+
+            <a href="parcours.html">
+                <i data-lucide="user-round"></i> Mon parcours
+            </a>
+
+            <a href="projets.html">
+                <i data-lucide="code-xml"></i> Mes projets
+            </a>
+
+            <a href="laboratoire.html" class="active">
+                <i data-lucide="server"></i> Mon laboratoire
+            </a>
+
+            <a href="veille.html">
+                <i data-lucide="shield-check"></i> Veille
+            </a>
+
+            <a href="contact.html">
+                <i data-lucide="mail"></i> Contact
+            </a>
+        </nav>
+    </header>
+
+    <main class="page-labo">
+
+        <h1>Mon laboratoire</h1>
+
+        <p class="labo-intro">
+            Un espace dédié à l'expérimentation,
+            aux travaux pratiques et à la découverte
+            des technologies systèmes et réseaux.
+        </p>
+
+        <div class="labo-grid">
+
+            <article class="labo-card">
+                <i data-lucide="monitor"></i>
+                <h2>Virtualisation</h2>
+
+                <p>
+                    Expérimenter avec des machines
+                    virtuelles pour installer différents
+                    systèmes et créer des environnements
+                    de test.
+                </p>
+            </article>
+
+            <article class="labo-card">
+                <i data-lucide="terminal"></i>
+                <h2>Linux</h2>
+
+                <p>
+                    Approfondir l'utilisation du terminal,
+                    la gestion des fichiers, des utilisateurs,
+                    des permissions et des services.
+                </p>
+            </article>
+
+            <article class="labo-card">
+                <i data-lucide="network"></i>
+                <h2>Réseaux</h2>
+
+                <p>
+                    Mettre en pratique l'adressage IP,
+                    les notions de routage et les méthodes
+                    de diagnostic réseau.
+                </p>
+            </article>
+
+            <article class="labo-card">
+                <i data-lucide="shield"></i>
+                <h2>Sécurité informatique</h2>
+
+                <p>
+                    Découvrir les bonnes pratiques
+                    de sécurisation, la gestion des accès
+                    et la protection des infrastructures.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="labo-note">
+            <strong>🔬 Laboratoire en construction</strong>
+            <p>
+                J'ajouterai progressivement mes
+                expérimentations, captures d'écran,
+                configurations et comptes rendus
+                de travaux pratiques.
+            </p>
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>

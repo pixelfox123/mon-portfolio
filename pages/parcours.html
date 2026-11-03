@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon parcours | ITnéraire</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .page-parcours {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 65px 25px 90px;
+        }
+
+        .page-parcours h1 {
+            color: #00eaff;
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .parcours-intro {
+            text-align: center;
+            color: #cbd5e1;
+            margin-bottom: 45px;
+        }
+
+        .parcours-card {
+            background: rgba(7, 19, 40, 0.9);
+            border: 1px solid rgba(0, 234, 255, 0.3);
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.08);
+        }
+
+        .parcours-card h2 {
+            color: #a855f7;
+            margin-bottom: 15px;
+        }
+
+        .parcours-card p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .parcours-card ul {
+            color: #cbd5e1;
+            line-height: 2;
+            padding-left: 22px;
+        }
+
+        .parcours-card strong {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BARRE DE NAVIGATION -->
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">
+            <i data-lucide="monitor-code"></i>
+            <span class="logo-text">
+                <strong>IT</strong>néraire
+            </span>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="../index.html">
+                <i data-lucide="house"></i>
+                Accueil
+            </a>
+
+            <a href="parcours.html" class="active">
+                <i data-lucide="user-round"></i>
+                Mon parcours
+            </a>
+
+            <a href="projets.html">
+                <i data-lucide="code-xml"></i>
+                Mes projets
+            </a>
+
+            <a href="laboratoire.html">
+                <i data-lucide="server"></i>
+                Mon laboratoire
+            </a>
+
+            <a href="veille.html">
+                <i data-lucide="shield-check"></i>
+                Veille
+            </a>
+
+            <a href="contact.html">
+                <i data-lucide="mail"></i>
+                Contact
+            </a>
+
+        </nav>
+    </header>
+
+    <!-- CONTENU -->
+    <main class="page-parcours">
+
+        <h1>Mon parcours</h1>
+
+        <p class="parcours-intro">
+            Découvrez mon évolution dans l'univers
+            des systèmes, des réseaux et de la cybersécurité.
+        </p>
+
+        <section class="parcours-card">
+            <h2>👩‍💻 Qui suis-je ?</h2>
+
+            <p>
+                Je m'appelle <strong>Salma COMA</strong> et je suis
+                actuellement en formation de
+                <strong>Technicienne Supérieure Systèmes et Réseaux (TSSR)</strong>.
+            </p>
+
+            <p>
+                Je m'intéresse particulièrement à l'administration
+                des systèmes, aux infrastructures réseau et
+                à la cybersécurité.
+            </p>
+        </section>
+
+        <section class="parcours-card">
+            <h2>🎓 Mes formations</h2>
+
+            <p>
+                <strong>BTS Services Informatiques aux Organisations (SIO),
+                option SISR</strong>
+            </p>
+            <p>
+                J'ai effectué une première année dans cette formation,
+                orientée vers les solutions d'infrastructure,
+                systèmes et réseaux.
+            </p>
+
+            <p>
+                <strong>Technicienne Supérieure Systèmes et Réseaux (TSSR)</strong>
+            </p>
+            <p>
+                Je poursuis actuellement mon apprentissage
+                dans l'administration et la maintenance
+                des systèmes et des réseaux informatiques.
+            </p>
+        </section>
+
+        <section class="parcours-card">
+            <h2>🛠️ Mes domaines d'apprentissage</h2>
+
+            <ul>
+                <li>Administration des systèmes Windows et Linux</li>
+                <li>Configuration et maintenance des réseaux</li>
+                <li>Virtualisation et gestion des machines virtuelles</li>
+                <li>Gestion des utilisateurs et des droits d'accès</li>
+                <li>Bonnes pratiques de sécurité informatique</li>
+            </ul>
+        </section>
+
+        <section class="parcours-card">
+            <h2>🔐 Mon objectif professionnel</h2>
+
+            <p>
+                Mon objectif est de renforcer mes compétences
+                en systèmes et réseaux, puis de poursuivre
+                mes études pour me spécialiser
+                dans le domaine de la cybersécurité.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- ICÔNES -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>

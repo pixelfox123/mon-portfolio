@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes projets | ITnéraire</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .page-projets {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 65px 25px 90px;
+        }
+
+        .page-projets h1 {
+            color: #00eaff;
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .projets-intro {
+            color: #cbd5e1;
+            text-align: center;
+            line-height: 1.7;
+            margin-bottom: 45px;
+        }
+
+        .projets-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .projet-card {
+            background: rgba(7, 19, 40, 0.92);
+            border: 1px solid rgba(0, 234, 255, 0.3);
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.07);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .projet-card:hover {
+            transform: translateY(-5px);
+            border-color: #a855f7;
+        }
+
+        .projet-card svg {
+            width: 35px;
+            height: 35px;
+            color: #00eaff;
+            margin-bottom: 15px;
+        }
+
+        .projet-card h2 {
+            color: #a855f7;
+            margin-bottom: 15px;
+        }
+
+        .projet-card p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .projet-tag {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 6px 12px;
+            border: 1px solid rgba(0, 234, 255, 0.45);
+            border-radius: 20px;
+            color: #00eaff;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 750px) {
+            .projets-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="../index.html" class="logo">
+            <i data-lucide="monitor-code"></i>
+            <span class="logo-text"><strong>IT</strong>néraire</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="../index.html">
+                <i data-lucide="house"></i> Accueil
+            </a>
+
+            <a href="parcours.html">
+                <i data-lucide="user-round"></i> Mon parcours
+            </a>
+
+            <a href="projets.html" class="active">
+                <i data-lucide="code-xml"></i> Mes projets
+            </a>
+
+            <a href="laboratoire.html">
+                <i data-lucide="server"></i> Mon laboratoire
+            </a>
+
+            <a href="veille.html">
+                <i data-lucide="shield-check"></i> Veille
+            </a>
+
+            <a href="contact.html">
+                <i data-lucide="mail"></i> Contact
+            </a>
+        </nav>
+    </header>
+
+    <main class="page-projets">
+
+        <h1>Mes projets</h1>
+
+        <p class="projets-intro">
+            Cet espace présente mes réalisations
+            et les projets que je développe au fil
+            de ma formation en systèmes et réseaux.
+        </p>
+
+        <div class="projets-grid">
+
+            <article class="projet-card">
+                <i data-lucide="globe"></i>
+                <h2>ITnéraire</h2>
+
+                <p>
+                    Conception et développement de mon site
+                    professionnel pour présenter mon parcours,
+                    mes projets et ma veille technologique.
+                </p>
+
+                <span class="projet-tag">
+                    HTML · CSS · JavaScript
+                </span>
+            </article>
+
+            <article class="projet-card">
+                <i data-lucide="network"></i>
+                <h2>Administration réseau</h2>
+
+                <p>
+                    Un espace pour présenter mes futurs
+                    travaux pratiques : adressage IP,
+                    configuration réseau et dépannage.
+                </p>
+
+                <span class="projet-tag">
+                    Projets à documenter
+                </span>
+            </article>
+
+            <article class="projet-card">
+                <i data-lucide="server"></i>
+                <h2>Systèmes Windows et Linux</h2>
+
+                <p>
+                    Je pourrai partager ici mes exercices
+                    d'installation, de configuration et
+                    d'administration de systèmes.
+                </p>
+
+                <span class="projet-tag">
+                    Projets à documenter
+                </span>
+            </article>
+
+            <article class="projet-card">
+                <i data-lucide="shield-check"></i>
+                <h2>Cybersécurité</h2>
+
+                <p>
+                    Cette section accueillera mes futurs
+                    travaux autour de la sécurisation
+                    des systèmes et des réseaux.
+                </p>
+
+                <span class="projet-tag">
+                    À venir
+                </span>
+            </article>
+
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>

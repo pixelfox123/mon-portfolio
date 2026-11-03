@@ -13,48 +13,48 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
 
     <!-- ========================= -->
     <!-- MENU DE NAVIGATION -->
     <!-- ========================= -->
 
-    <header class="navbar">
 
-        <a href="index.html" class="logo">
-            <span class="logo-icon">⌨</span>
-            <span class="logo-text"><strong>IT</strong>néraire</span>
+ <header class="navbar">
+
+    <a href="index.html" class="logo">
+        <i data-lucide="monitor-code"></i>
+        <span class="logo-text"><strong>IT</strong>néraire</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="index.html" class="active">
+            <i data-lucide="house"></i> Accueil
         </a>
 
-        <nav class="nav-links" aria-label="Navigation principale">
+        <a href="pages/parcours.html">
+            <i data-lucide="user-round"></i> Mon parcours
+        </a>
 
-            <a href="index.html" class="active">
-                ⌂ Accueil
-            </a>
+        <a href="pages/projets.html">
+            <i data-lucide="code-xml"></i> Mes projets
+        </a>
 
-            <a href="pages/parcours.html">
-                ♙ Mon parcours
-            </a>
+        <a href="pages/laboratoire.html">
+            <i data-lucide="server"></i> Mon laboratoire
+        </a>
 
-            <a href="pages/projets.html">
-                &lt;/&gt; Mes projets
-            </a>
+        <a href="pages/veille.html">
+            <i data-lucide="shield-check"></i> Veille
+        </a>
 
-            <a href="pages/laboratoire.html">
-                ▤ Mon laboratoire
-            </a>
+        <a href="pages/contact.html">
+            <i data-lucide="mail"></i> Contact
+        </a>
+    </nav>
 
-            <a href="pages/veille.html">
-                ◉ Veille technologique
-            </a>
-
-            <a href="pages/contact.html">
-                ✉ Contact
-            </a>
-
-        </nav>
-
-    </header>
+</header>
 
 
     <!-- ========================= -->
@@ -69,176 +69,43 @@
             <div class="hero-glow hero-glow-left"></div>
             <div class="hero-glow hero-glow-right"></div>
 
-            <div class="hero-content">
+<div class="hero-content">
 
-                <!-- Grand titre -->
-                <h1 class="hero-title">
-                    <span>IT</span>néraire
-                </h1>
+    <h1 class="hero-title">
+        <span>IT</span>néraire
+    </h1>
 
-                <!-- Sous-titre -->
-                <p class="hero-subtitle">
-                    Mon parcours dans l'univers informatique.
-                </p>
+    <p class="hero-subtitle">
+        Bienvenue dans mon univers numérique
+    </p>
 
-                <!-- Formation -->
-                <div class="formation-badge">
-                    <span class="badge-icon">🎓</span>
+    <h2 class="hero-name">
+        Salma COMA
+    </h2>
 
-                    <span>
-                        Technicienne Supérieure Systèmes et Réseaux
-                        en formation
-                    </span>
-                </div>
+    <div class="formation-badge">
+        🎓 Technicienne Supérieure Systèmes et Réseaux en formation
+    </div>
 
-                <!-- Présentation -->
-                <p class="hero-description">
+    <div class="hero-buttons">
 
-                    Étudiante passionnée par les systèmes, les réseaux
-                    et la cybersécurité,
+        <a href="pages/parcours.html" class="btn btn-primary">
+            🚀 Découvrir mon parcours
+        </a>
 
-                    <br>
+        <a href="pages/projets.html" class="btn btn-secondary">
+            &lt;/&gt; Mes réalisations
+        </a>
 
-                    je partage ici mon parcours, mes projets,
-                    mon laboratoire et ma veille technologique.
+        <a href="pages/veille.html" class="btn btn-veille">
+            🛡️ Veille
+        </a>
 
-                    <br>
+    </div>
 
-                    Mon objectif : approfondir mes compétences
-                    et évoluer vers le domaine de la cybersécurité.
-
-                </p>
-
-                <!-- Boutons interactifs -->
-                <div class="hero-buttons">
-
-                    <a href="pages/parcours.html"
-                       class="btn btn-primary">
-
-                        <span>🚀</span>
-                        Découvrir mon parcours
-                        <span>→</span>
-
-                    </a>
-
-                    <a href="pages/projets.html"
-                       class="btn btn-secondary">
-
-                        <span>⌘</span>
-                        Explorer mes projets
-                        <span>→</span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
+</div>
 
 
-        <!-- ========================= -->
-        <!-- LES SIX RUBRIQUES -->
-        <!-- ========================= -->
-
-        <section class="rubriques">
-
-            <div class="cards-container">
-
-                <!-- ACCUEIL -->
-                <a href="index.html" class="card cyan">
-
-                    <div class="card-icon">⌂</div>
-
-                    <h2>Accueil</h2>
-
-                    <p>
-                        Présentation du site
-                        et introduction
-                    </p>
-
-                </a>
-
-
-                <!-- MON PARCOURS -->
-                <a href="pages/parcours.html" class="card purple">
-
-                    <div class="card-icon">♙</div>
-
-                    <h2>Mon parcours</h2>
-
-                    <p>
-                        BTS SIO SISR, TSSR
-                        et mes objectifs
-                    </p>
-
-                </a>
-
-
-                <!-- MES PROJETS -->
-                <a href="pages/projets.html" class="card cyan">
-
-                    <div class="card-icon">&lt;/&gt;</div>
-
-                    <h2>Mes projets</h2>
-
-                    <p>
-                        TP, réalisations
-                        et captures d'écran
-                    </p>
-
-                </a>
-
-
-                <!-- MON LABORATOIRE -->
-                <a href="pages/laboratoire.html" class="card purple">
-
-                    <div class="card-icon">▤</div>
-
-                    <h2>Mon laboratoire</h2>
-
-                    <p>
-                        Machines virtuelles,
-                        Windows Server,
-                        Linux et réseaux
-                    </p>
-
-                </a>
-
-
-                <!-- VEILLE TECHNOLOGIQUE -->
-                <a href="pages/veille.html" class="card cyan">
-
-                    <div class="card-icon">◉</div>
-
-                    <h2>Veille technologique</h2>
-
-                    <p>
-                        Actualités et
-                        découvertes informatiques
-                    </p>
-
-                </a>
-
-
-                <!-- CONTACT -->
-                <a href="pages/contact.html" class="card purple">
-
-                    <div class="card-icon">✉</div>
-
-                    <h2>Contact</h2>
-
-                    <p>
-                        GitHub, LinkedIn
-                        et coordonnées
-                        professionnelles
-                    </p>
-
-                </a>
-
-            </div>
-
-        </section>
 
     </main>
 
@@ -251,7 +118,7 @@
 
         <p>
             © 2026 ITnéraire —
-            Mon parcours dans l'univers informatique.
+            Mon parcours dans l'univers numérique.
         </p>
 
     </footer>
@@ -260,5 +127,11 @@
     <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>
 
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script>
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+</script>
 </body>
 </html>
