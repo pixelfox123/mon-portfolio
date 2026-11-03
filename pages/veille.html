@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille technologique | ITnéraire</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .veille-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 25px;
+        }
+
+        .veille-page h1 {
+            text-align: center;
+            color: #00eaff;
+            font-size: 2.7rem;
+            margin-bottom: 15px;
+        }
+
+        .veille-intro {
+            text-align: center;
+            color: #cbd5e1;
+            margin-bottom: 45px;
+            line-height: 1.7;
+        }
+
+        .veille-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .veille-card {
+            background: #071328;
+            border: 1px solid #00eaff55;
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 0 20px #00eaff15;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .veille-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 25px #00eaff45;
+        }
+
+        .veille-card h2 {
+            color: #a855f7;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .veille-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .veille-card a {
+            color: #00eaff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .veille-card a:hover {
+            text-decoration: underline;
+        }
+
+        .retour {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #00eaff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="veille-page">
+
+        <a class="retour" href="../index.html">
+            ← Retour à l'accueil
+        </a>
+
+        <h1>🔐 Veille technologique</h1>
+
+        <p class="veille-intro">
+            Dans le cadre de ma formation de Technicienne Supérieure
+            Systèmes et Réseaux, je m'intéresse aux évolutions
+            de l'informatique et de la cybersécurité.
+            Voici une sélection de sujets que je suis.
+        </p>
+
+        <div class="veille-grid">
+
+            <article class="veille-card">
+                <h2>🛡️ Les ransomwares</h2>
+
+                <p>
+                    Les ransomwares sont des logiciels malveillants
+                    capables de bloquer l'accès aux données d'une
+                    organisation. Les sauvegardes déconnectées,
+                    les mises à jour et la sécurisation des accès
+                    sont essentielles pour limiter les risques.
+                </p>
+
+                <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/rancongiciels-ransomwares/27f97a8d-cf2a-4bbc-8824-c09a17c2b57b"
+                   target="_blank" rel="noopener noreferrer">
+                    Consulter la source ↗
+                </a>
+            </article>
+
+            <article class="veille-card">
+                <h2>🐧 Les vulnérabilités Linux</h2>
+
+                <p>
+                    Le CERT-FR publie régulièrement des alertes
+                    concernant les vulnérabilités des systèmes Linux.
+                    Certaines failles peuvent permettre une élévation
+                    de privilèges ou perturber les services.
+                    Il est donc important de suivre les correctifs.
+                </p>
+
+                <a href="https://www.cert.ssi.gouv.fr/avis/"
+                   target="_blank" rel="noopener noreferrer">
+                    Consulter les avis du CERT-FR ↗
+                </a>
+            </article>
+
+            <article class="veille-card">
+                <h2>🔥 La sécurité des réseaux</h2>
+
+                <p>
+                    La protection d'un réseau repose notamment
+                    sur la configuration des pare-feu,
+                    les mises à jour des équipements,
+                    l'authentification multifacteur
+                    et la sécurisation des accès distants.
+                </p>
+
+                <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/impact-cyber-antoine"
+                   target="_blank" rel="noopener noreferrer">
+                    Consulter les recommandations ↗
+                </a>
+            </article>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
