@@ -64,6 +64,42 @@
             line-height: 1.8;
         }
 
+        /* Les 4 cartes du laboratoire cliquables */
+
+        .labo-card-link {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .labo-card-link:focus-visible {
+            outline: 2px solid #00eaff;
+            outline-offset: 4px;
+        }
+
+        .labo-card-link .card-arrow {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        .labo-card-link .card-arrow svg {
+            width: 22px;
+            height: 22px;
+            margin-bottom: 0;
+            color: #00eaff;
+            transition: transform 0.3s;
+        }
+
+        .labo-card-link:hover .card-arrow svg,
+        .labo-card-link:focus-visible .card-arrow svg {
+            transform: translate(3px, -3px);
+        }
+
         .labo-note {
             margin-top: 35px;
             padding: 25px;
@@ -130,7 +166,11 @@
 
         <div class="labo-grid">
 
-            <article class="labo-card">
+            <!-- VIRTUALISATION -->
+
+            <a href="virtualisation.html"
+               class="labo-card labo-card-link">
+
                 <i data-lucide="monitor"></i>
                 <h2>Virtualisation</h2>
 
@@ -140,9 +180,17 @@
                     systèmes et créer des environnements
                     de test.
                 </p>
-            </article>
 
-            <article class="labo-card">
+                <span class="card-arrow" aria-hidden="true">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+            </a>
+
+            <!-- LINUX -->
+
+            <a href="linux.html"
+               class="labo-card labo-card-link">
+
                 <i data-lucide="terminal"></i>
                 <h2>Linux</h2>
 
@@ -151,9 +199,17 @@
                     la gestion des fichiers, des utilisateurs,
                     des permissions et des services.
                 </p>
-            </article>
 
-            <article class="labo-card">
+                <span class="card-arrow" aria-hidden="true">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+            </a>
+
+            <!-- RÉSEAUX -->
+
+            <a href="reseaux.html"
+               class="labo-card labo-card-link">
+
                 <i data-lucide="network"></i>
                 <h2>Réseaux</h2>
 
@@ -162,9 +218,17 @@
                     les notions de routage et les méthodes
                     de diagnostic réseau.
                 </p>
-            </article>
 
-            <article class="labo-card">
+                <span class="card-arrow" aria-hidden="true">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+            </a>
+
+            <!-- SÉCURITÉ INFORMATIQUE -->
+
+            <a href="securite.html"
+               class="labo-card labo-card-link">
+
                 <i data-lucide="shield"></i>
                 <h2>Sécurité informatique</h2>
 
@@ -173,53 +237,56 @@
                     de sécurisation, la gestion des accès
                     et la protection des infrastructures.
                 </p>
-            </article>
 
-            
+                <span class="card-arrow" aria-hidden="true">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+            </a>
 
-<div class="labo-card">
-    <h2>📚 Mes ressources TSSR</h2>
+            <!-- MES RESSOURCES TSSR : INCHANGÉ -->
 
-    <p>
-        Dans le cadre de ma formation TSSR,
-        je consulte différentes ressources
-        pédagogiques pour compléter mes cours
-        et approfondir mes connaissances
-        en systèmes, réseaux et cybersécurité.
-    </p>
+            <div class="labo-card">
+                <h2>📚 Mes ressources TSSR</h2>
 
-    <p style="margin-top: 18px;">
-        Parmi ces ressources, j'ai découvert
-        un site pédagogique réalisé par
-        un enseignant, proposant des supports
-        autour de la formation TSSR.
-    </p>
+                <p>
+                    Dans le cadre de ma formation TSSR,
+                    je consulte différentes ressources
+                    pédagogiques pour compléter mes cours
+                    et approfondir mes connaissances
+                    en systèmes, réseaux et cybersécurité.
+                </p>
 
-    <a href="https://tssr.miyukini.com/"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="
-           display: inline-block;
-           margin-top: 20px;
-           padding: 12px 20px;
-           border: 1px solid #00eaff;
-           border-radius: 10px;
-           color: #00eaff;
-           text-decoration: none;
-           font-weight: bold;
-       ">
-        📖 Découvrir les ressources TSSR ↗
-    </a>
+                <p style="margin-top: 18px;">
+                    Parmi ces ressources, j'ai découvert
+                    un site pédagogique réalisé par
+                    un enseignant, proposant des supports
+                    autour de la formation TSSR.
+                </p>
 
-    <p style="
-        margin-top: 15px;
-        font-size: 0.85rem;
-        opacity: 0.7;
-    ">
-        Ressource pédagogique externe — site d'un enseignant.
-    </p>
-</div>
+                <a href="https://tssr.miyukini.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   style="
+                       display: inline-block;
+                       margin-top: 20px;
+                       padding: 12px 20px;
+                       border: 1px solid #00eaff;
+                       border-radius: 10px;
+                       color: #00eaff;
+                       text-decoration: none;
+                       font-weight: bold;
+                   ">
+                    📖 Découvrir les ressources TSSR ↗
+                </a>
 
+                <p style="
+                    margin-top: 15px;
+                    font-size: 0.85rem;
+                    opacity: 0.7;
+                ">
+                    Ressource pédagogique externe — site d'un enseignant.
+                </p>
+            </div>
 
         </div>
 

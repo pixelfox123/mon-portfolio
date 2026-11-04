@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtualisation | ITnéraire</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .page-virtualisation {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 65px 25px 90px;
+        }
+
+        .page-virtualisation h1 {
+            color: #00eaff;
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 45px;
+        }
+
+        .section-card {
+            background: rgba(7, 19, 40, 0.92);
+            border: 1px solid rgba(168, 85, 247, 0.45);
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .section-card h2 {
+            color: #a855f7;
+            margin-bottom: 18px;
+        }
+
+        .section-card p,
+        .section-card li {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .section-card ul {
+            padding-left: 22px;
+        }
+
+        .section-card li {
+            margin-bottom: 10px;
+        }
+
+        .document-card {
+            background: rgba(0, 234, 255, 0.04);
+            border: 1px solid rgba(0, 234, 255, 0.25);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .document-card h3 {
+            color: #00eaff;
+            margin-bottom: 10px;
+        }
+
+        .statut {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(168, 85, 247, 0.6);
+            color: #c084fc;
+            font-size: 0.85rem;
+        }
+
+        .retour {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            color: #00eaff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .retour:hover {
+            color: #c084fc;
+        }
+
+        .retour svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (max-width: 750px) {
+            .section-card {
+                padding: 22px;
+            }
+        }
+
+        .retour-flottant {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    left: auto;
+    z-index: 1000;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+    background: rgba(7, 19, 40, 0.95);
+    border: 1px solid #00eaff;
+    border-radius: 12px;
+
+    color: #00eaff;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.15);
+    transition: 0.3s;
+}
+
+.retour-flottant:hover {
+    background: rgba(0, 234, 255, 0.12);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.retour-flottant svg {
+    width: 18px;
+    height: 18px;
+}
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="../index.html" class="logo">
+            <i data-lucide="monitor-code"></i>
+            <span class="logo-text">
+                <strong>IT</strong>néraire
+            </span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="../index.html">
+                <i data-lucide="house"></i> Accueil
+            </a>
+
+            <a href="parcours.html">
+                <i data-lucide="user-round"></i> Mon parcours
+            </a>
+
+            <a href="projets.html">
+                <i data-lucide="code-xml"></i> Mes projets
+            </a>
+
+            <a href="laboratoire.html" class="active">
+                <i data-lucide="server"></i> Mon laboratoire
+            </a>
+
+            <a href="veille.html">
+                <i data-lucide="shield-check"></i> Veille
+            </a>
+
+            <a href="contact.html">
+                <i data-lucide="mail"></i> Contact
+            </a>
+        </nav>
+    </header>
+
+    <main class="page-virtualisation">
+
+        <h1>Virtualisation</h1>
+
+        <p class="intro">
+            Un espace consacré à la découverte de la virtualisation,
+            à mes cours et à mes travaux pratiques réalisés
+            au fil de mon parcours en systèmes et réseaux.
+        </p>
+
+        <!-- DEFINITION -->
+        <section class="section-card">
+            <h2>📖 Qu'est-ce que la virtualisation ?</h2>
+
+            <p>
+                La virtualisation est une technologie qui permet
+                de créer plusieurs environnements informatiques
+                virtuels sur une même machine physique.
+                Elle permet notamment d'exécuter différents
+                systèmes d'exploitation grâce à des machines
+                virtuelles, sans avoir besoin d'un ordinateur
+                physique pour chacun d'eux.
+            </p>
+
+            <p>
+                Elle est utilisée pour tester des configurations,
+                expérimenter différents systèmes et optimiser
+                l'utilisation des ressources matérielles.
+            </p>
+        </section>
+
+        <!-- OBJECTIFS -->
+        <section class="section-card">
+            <h2>🎯 Mes objectifs d'apprentissage</h2>
+
+            <ul>
+                <li>Comprendre le fonctionnement de la virtualisation.</li>
+                <li>Découvrir les hyperviseurs et leurs utilisations.</li>
+                <li>Créer et configurer des machines virtuelles.</li>
+                <li>Installer des systèmes d'exploitation virtualisés.</li>
+                <li>Configurer les ressources et les réseaux virtuels.</li>
+                <li>Utiliser des environnements de test pour progresser.</li>
+            </ul>
+        </section>
+
+        <!-- COURS -->
+        <section class="section-card">
+            <h2>📚 Mes cours</h2>
+
+            <p>
+                Cette section regroupera mes notes,
+                mes fiches de révision et mes synthèses
+                personnelles sur la virtualisation.
+            </p>
+
+            <div class="document-card">
+                <h3>BTS SIO — Option SISR</h3>
+
+                <p>
+                    Mes ressources personnelles issues
+                    de mon parcours en BTS SIO SISR.
+                </p>
+
+                <span class="statut">Cours à ajouter</span>
+            </div>
+
+            <div class="document-card">
+                <h3>Formation TSSR</h3>
+
+                <p>
+                    Mes notes et synthèses personnelles
+                    liées à ma formation TSSR.
+                </p>
+
+                <span class="statut">Cours à ajouter</span>
+            </div>
+        </section>
+
+        <!-- TP -->
+        <section class="section-card">
+            <h2>💻 Mes travaux pratiques</h2>
+
+            <p>
+                Je partagerai ici les travaux pratiques
+                que j'ai réalisés en formation,
+                avec leurs objectifs, les outils utilisés,
+                les étapes et les résultats obtenus.
+            </p>
+
+            <div class="document-card">
+                <h3>TP — BTS SIO SISR</h3>
+
+                <p>
+                    Les travaux pratiques de virtualisation
+                    issus de mon BTS SIO SISR seront
+                    présentés ici progressivement.
+                </p>
+
+                <span class="statut">TP à ajouter</span>
+            </div>
+
+            <div class="document-card">
+                <h3>TP — Formation TSSR</h3>
+
+                <p>
+                    Cet espace accueillera mes travaux
+                    pratiques de virtualisation réalisés
+                    pendant ma formation TSSR.
+                </p>
+
+                <span class="statut">TP à ajouter</span>
+            </div>
+        </section>
+
+
+        <a href="laboratoire.html"
+   class="retour-flottant">
+    <i data-lucide="arrow-left"></i>
+    Mon laboratoire
+</a>
+
+    </main>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>

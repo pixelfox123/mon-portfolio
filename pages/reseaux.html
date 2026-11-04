@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réseaux | ITnéraire</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .page-reseaux {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 65px 25px 90px;
+        }
+
+        .page-reseaux h1 {
+            color: #00eaff;
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 45px;
+        }
+
+        .section-card {
+            background: rgba(7, 19, 40, 0.92);
+            border: 1px solid rgba(168, 85, 247, 0.45);
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .section-card h2 {
+            color: #a855f7;
+            margin-bottom: 18px;
+        }
+
+        .section-card p,
+        .section-card li {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .section-card p + p {
+            margin-top: 15px;
+        }
+
+        .section-card ul {
+            padding-left: 22px;
+        }
+
+        .section-card li {
+            margin-bottom: 10px;
+        }
+
+        .document-card {
+            background: rgba(0, 234, 255, 0.04);
+            border: 1px solid rgba(0, 234, 255, 0.25);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .document-card h3 {
+            color: #00eaff;
+            margin-bottom: 10px;
+        }
+
+        .statut {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(168, 85, 247, 0.6);
+            color: #c084fc;
+            font-size: 0.85rem;
+        }
+
+        .retour-flottant {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            left: auto;
+            z-index: 1000;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 12px 18px;
+            background: rgba(7, 19, 40, 0.95);
+            border: 1px solid #00eaff;
+            border-radius: 12px;
+
+            color: #00eaff;
+            font-weight: bold;
+            text-decoration: none;
+
+            box-shadow: 0 0 15px rgba(0, 234, 255, 0.15);
+            transition: 0.3s;
+        }
+
+        .retour-flottant:hover,
+        .retour-flottant:focus-visible {
+            background: rgba(0, 234, 255, 0.12);
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        .retour-flottant svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (max-width: 750px) {
+            .section-card {
+                padding: 22px;
+            }
+
+            .retour-flottant {
+                right: 15px;
+                bottom: 15px;
+                padding: 10px 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="../index.html" class="logo">
+            <i data-lucide="monitor-code"></i>
+            <span class="logo-text">
+                <strong>IT</strong>néraire
+            </span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="../index.html">
+                <i data-lucide="house"></i> Accueil
+            </a>
+
+            <a href="parcours.html">
+                <i data-lucide="user-round"></i> Mon parcours
+            </a>
+
+            <a href="projets.html">
+                <i data-lucide="code-xml"></i> Mes projets
+            </a>
+
+            <a href="laboratoire.html" class="active">
+                <i data-lucide="server"></i> Mon laboratoire
+            </a>
+
+            <a href="veille.html">
+                <i data-lucide="shield-check"></i> Veille
+            </a>
+
+            <a href="contact.html">
+                <i data-lucide="mail"></i> Contact
+            </a>
+        </nav>
+    </header>
+
+    <main class="page-reseaux">
+
+        <h1>Réseaux</h1>
+
+        <p class="intro">
+            Un espace consacré aux réseaux informatiques,
+            à leur fonctionnement, à leur administration
+            et aux connaissances que je développe
+            au fil de mon parcours en systèmes et réseaux.
+        </p>
+
+        <!-- DEFINITION -->
+        <section class="section-card">
+            <h2>📖 Qu'est-ce qu'un réseau informatique ?</h2>
+
+            <p>
+                Un réseau informatique est un ensemble
+                d'équipements interconnectés qui peuvent
+                communiquer et échanger des données.
+                Il peut relier des ordinateurs, des serveurs,
+                des imprimantes et de nombreux autres appareils.
+            </p>
+
+            <p>
+                Les réseaux permettent notamment de partager
+                des ressources, d'accéder à des services
+                et de communiquer au sein d'une organisation
+                ou à travers Internet.
+            </p>
+
+            <p>
+                Leur fonctionnement repose sur différents
+                protocoles, équipements et mécanismes,
+                comme l'adressage IP, les commutateurs,
+                les routeurs et les services réseau.
+            </p>
+        </section>
+
+        <!-- OBJECTIFS -->
+        <section class="section-card">
+            <h2>🎯 Mes objectifs d'apprentissage</h2>
+
+            <ul>
+                <li>Comprendre le fonctionnement des réseaux informatiques.</li>
+                <li>Approfondir les modèles OSI et TCP/IP.</li>
+                <li>Maîtriser les bases de l'adressage IPv4 et des sous-réseaux.</li>
+                <li>Découvrir le rôle des commutateurs et des routeurs.</li>
+                <li>Comprendre les principes du routage et des VLAN.</li>
+                <li>Étudier les services réseau comme DNS et DHCP.</li>
+                <li>Apprendre à diagnostiquer les problèmes de connectivité.</li>
+                <li>Développer mes connaissances en administration et sécurisation des réseaux.</li>
+            </ul>
+        </section>
+
+        <!-- COURS -->
+        <section class="section-card">
+            <h2>📚 Mes cours</h2>
+
+            <p>
+                Cette section regroupera mes fiches de révision,
+                mes notes et mes synthèses personnelles
+                consacrées aux réseaux informatiques.
+            </p>
+
+            <div class="document-card">
+                <h3>BTS SIO — Option SISR</h3>
+
+                <p>
+                    Mes ressources personnelles issues
+                    de mon parcours en BTS SIO SISR.
+                </p>
+
+                <span class="statut">Cours à ajouter</span>
+            </div>
+
+            <div class="document-card">
+                <h3>Formation TSSR</h3>
+
+                <p>
+                    Mes notes et synthèses personnelles
+                    liées à ma formation TSSR.
+                </p>
+
+                <span class="statut">Cours à ajouter</span>
+            </div>
+        </section>
+
+        <!-- TRAVAUX PRATIQUES -->
+        <section class="section-card">
+            <h2>💻 Mes travaux pratiques</h2>
+
+            <p>
+                Je présenterai ici mes travaux pratiques
+                autour des réseaux, avec leurs objectifs,
+                les outils utilisés, les manipulations
+                réalisées et les résultats obtenus.
+            </p>
+
+            <div class="document-card">
+                <h3>TP — BTS SIO SISR</h3>
+
+                <p>
+                    Cet espace accueillera mes travaux
+                    pratiques de réseaux issus
+                    de mon BTS SIO SISR.
+                </p>
+
+                <span class="statut">TP à ajouter</span>
+            </div>
+
+            <div class="document-card">
+                <h3>TP — Formation TSSR</h3>
+
+                <p>
+                    Cet espace accueillera mes travaux
+                    pratiques de réseaux réalisés
+                    pendant ma formation TSSR.
+                </p>
+
+                <span class="statut">TP à ajouter</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BOUTON DE RETOUR -->
+    <a href="laboratoire.html" class="retour-flottant">
+        <i data-lucide="arrow-left"></i>
+        Mon laboratoire
+    </a>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>
