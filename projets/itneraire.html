@@ -88,6 +88,51 @@
                 padding: 35px 18px 60px;
             }
         }
+
+        
+/* Bouton retour toujours visible */
+.retour-flottant {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1100;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 13px 20px;
+    border: 1px solid #00eaff;
+    border-radius: 50px;
+
+    background: rgba(7, 19, 40, 0.96);
+    color: #00eaff;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow: 0 0 20px #00eaff33;
+    transition: 0.3s;
+}
+
+.retour-flottant:hover {
+    background: #00eaff;
+    color: #030817;
+    box-shadow: 0 0 25px #00eaff77;
+}
+
+@media (max-width: 768px) {
+    .retour-flottant {
+        bottom: 18px;
+        right: 15px;
+        padding: 11px 15px;
+        font-size: 0.85rem;
+    }
+
+    .projet-page {
+        padding-bottom: 100px;
+    }
+}
+
     </style>
 </head>
 
@@ -270,14 +315,7 @@
 
         </article>
 
-        <div class="retour">
-            <a
-                href="../pages/projets.html"
-                class="retour-projets"
-            >
-                ← Retour à mes projets
-            </a>
-        </div>
+
 
     </main>
 
@@ -287,6 +325,14 @@
             lucide.createIcons();
         }
     </script>
+
+
+<a href="../pages/projets.html"
+   class="retour-flottant">
+    <i data-lucide="arrow-left"></i>
+    Mes projets
+</a>
+
 
 </body>
 </html>
