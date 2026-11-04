@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Veille technologique | ITnéraire</title>
+
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
@@ -17,7 +19,7 @@
         .veille-page h1 {
             text-align: center;
             color: #00eaff;
-            font-size: 2.7rem;
+            font-size: clamp(2rem, 5vw, 2.7rem);
             margin-bottom: 15px;
         }
 
@@ -30,7 +32,10 @@
 
         .veille-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(min(100%, 260px), 1fr)
+            );
             gap: 25px;
         }
 
@@ -40,11 +45,13 @@
             border-radius: 18px;
             padding: 28px;
             box-shadow: 0 0 20px #00eaff15;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition:
+                transform 0.3s,
+                box-shadow 0.3s;
         }
 
         .veille-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
             box-shadow: 0 0 25px #00eaff45;
         }
 
@@ -61,13 +68,29 @@
         }
 
         .veille-card a {
+            display: inline-block;
             color: #00eaff;
             font-weight: bold;
             text-decoration: none;
+            overflow-wrap: anywhere;
         }
 
         .veille-card a:hover {
             text-decoration: underline;
+        }
+
+        .veille-card .source-suivante {
+            margin-top: 28px;
+        }
+
+        @media (max-width: 768px) {
+            .veille-page {
+                padding: 35px 18px 65px;
+            }
+
+            .veille-card {
+                padding: 23px;
+            }
         }
     </style>
 </head>
@@ -87,27 +110,33 @@
         <nav class="nav-links">
 
             <a href="../index.html">
-                <i data-lucide="house"></i> Accueil
+                <i data-lucide="house"></i>
+                Accueil
             </a>
 
             <a href="parcours.html">
-                <i data-lucide="user-round"></i> Mon parcours
+                <i data-lucide="user-round"></i>
+                Mon parcours
             </a>
 
             <a href="projets.html">
-                <i data-lucide="code-xml"></i> Mes projets
+                <i data-lucide="code-xml"></i>
+                Mes projets
             </a>
 
             <a href="laboratoire.html">
-                <i data-lucide="server"></i> Mon laboratoire
+                <i data-lucide="server"></i>
+                Mon laboratoire
             </a>
 
             <a href="veille.html" class="active">
-                <i data-lucide="shield-check"></i> Veille
+                <i data-lucide="shield-check"></i>
+                Veille
             </a>
 
             <a href="contact.html">
-                <i data-lucide="mail"></i> Contact
+                <i data-lucide="mail"></i>
+                Contact
             </a>
 
         </nav>
@@ -119,158 +148,342 @@
         <h1>🔐 Veille technologique</h1>
 
         <p class="veille-intro">
-            Dans le cadre de ma formation de Technicienne Supérieure
-            Systèmes et Réseaux, je m'intéresse aux évolutions
-            de l'informatique et de la cybersécurité.
-            Voici une sélection de sujets que je suis.
+            Dans le cadre de ma formation de
+            Technicienne Supérieure Systèmes et Réseaux,
+            je m'intéresse aux évolutions de
+            l'informatique et de la cybersécurité.
+            Voici une sélection des sujets que je suis
+            et des ressources que je consulte.
         </p>
 
         <div class="veille-grid">
 
+            <!-- 1. RANSOMWARES -->
             <article class="veille-card">
+
                 <h2>🛡️ Les ransomwares</h2>
 
                 <p>
-                    Les ransomwares sont des logiciels malveillants
-                    capables de bloquer l'accès aux données d'une
-                    organisation. Les sauvegardes déconnectées,
-                    les mises à jour et la sécurisation des accès
-                    sont essentielles pour limiter les risques.
+                    Les ransomwares sont des logiciels
+                    malveillants capables de bloquer
+                    l'accès aux données d'une organisation.
+
+                    Les sauvegardes déconnectées,
+                    les mises à jour et la sécurisation
+                    des accès sont essentielles
+                    pour limiter les risques.
                 </p>
 
-                <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/rancongiciels-ransomwares/27f97a8d-cf2a-4bbc-8824-c09a17c2b57b"
-                   target="_blank" rel="noopener noreferrer">
-                    Consulter la source ↗
+                <a
+                    href="https://www.cybermalveillance.gouv.fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter Cybermalveillance.gouv.fr ↗
                 </a>
+
             </article>
 
- 
-
-<article class="veille-card">
-
-    <h2>🐧 Les vulnérabilités Linux</h2>
-
-    <!-- PARTIE CERT-FR -->
-    <p>
-        Le CERT-FR publie régulièrement des alertes
-        concernant les vulnérabilités des systèmes Linux.
-        Certaines failles peuvent permettre une élévation
-        de privilèges ou perturber les services.
-        Il est donc important de suivre les correctifs.
-    </p>
-
-    <a href="https://www.cert.ssi.gouv.fr/avis/"
-       target="_blank" rel="noopener noreferrer">
-        Consulter les avis du CERT-FR ↗
-    </a>
-
-    <!-- PARTIE CVE -->
-    <p style="margin-top: 30px;">
-        CVE.org répertorie les vulnérabilités de sécurité
-        connues et leur attribue un identifiant unique.
-        Cette base permet de rechercher des failles
-        concernant Linux et d'autres systèmes,
-        afin de suivre les risques et les correctifs.
-    </p>
-
-    <a href="https://www.cve.org/"
-       target="_blank" rel="noopener noreferrer">
-        Consulter CVE.org ↗
-    </a>
-
-</article>
-
-
-
+            <!-- 2. LINUX -->
             <article class="veille-card">
+
+                <h2>🐧 Les vulnérabilités Linux</h2>
+
+                <p>
+                    Le CERT-FR publie régulièrement
+                    des avis concernant les vulnérabilités
+                    des systèmes Linux.
+
+                    Certaines failles peuvent permettre
+                    une élévation de privilèges
+                    ou perturber les services.
+
+                    Il est important de suivre
+                    les correctifs de sécurité.
+                </p>
+
+                <a
+                    href="https://www.cert.ssi.gouv.fr/avis/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter les avis du CERT-FR ↗
+                </a>
+
+                <p class="source-suivante">
+                    CVE.org répertorie les vulnérabilités
+                    connues et leur attribue
+                    un identifiant unique.
+
+                    Cette base permet notamment
+                    de rechercher des failles
+                    concernant Linux et d'autres systèmes.
+                </p>
+
+                <a
+                    href="https://www.cve.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter CVE.org ↗
+                </a>
+
+            </article>
+
+            <!-- 3. SÉCURITÉ RÉSEAU -->
+            <article class="veille-card">
+
                 <h2>🔥 La sécurité des réseaux</h2>
 
                 <p>
-                    La protection d'un réseau repose notamment
-                    sur la configuration des pare-feu,
-                    les mises à jour des équipements,
-                    l'authentification multifacteur
-                    et la sécurisation des accès distants.
+                    La protection d'un réseau repose
+                    notamment sur la configuration
+                    des pare-feu, les mises à jour
+                    des équipements, l'authentification
+                    multifacteur et la sécurisation
+                    des accès distants.
                 </p>
 
-                <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/impact-cyber-antoine"
-                   target="_blank" rel="noopener noreferrer">
+                <a
+                    href="https://www.cybermalveillance.gouv.fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Consulter les recommandations ↗
                 </a>
+
             </article>
 
-            
-<article class="veille-card">
+            <!-- 4. PHP -->
+            <article class="veille-card">
 
-    <h2>🐘 Les vulnérabilités PHP</h2>
+                <h2>🐘 Les vulnérabilités PHP</h2>
 
-    <p>
-        Le 22 octobre 2026, Cybermalveillance.gouv.fr
-        a publié une alerte concernant deux failles
-        de sécurité critiques dans PHP, un langage
-        utilisé pour développer des sites et
-        applications web.
+                <p>
+                    En octobre 2026,
+                    Cybermalveillance.gouv.fr a publié
+                    une alerte concernant des failles
+                    critiques dans PHP.
 
-        Ces vulnérabilités peuvent permettre à un
-        attaquant de prendre le contrôle de systèmes
-        vulnérables, d'accéder à des données sensibles
-        ou de perturber leur fonctionnement.
+                    Ce langage est utilisé pour
+                    développer de nombreux sites
+                    et applications web.
 
-        Il est donc essentiel de maintenir PHP à jour
-        et d'appliquer rapidement les correctifs
-        de sécurité.
-    </p>
+                    Certaines vulnérabilités peuvent
+                    compromettre la sécurité
+                    des systèmes concernés.
 
-    <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/alerte-cyber-failles-de-securite-critiques-dans-php-202610"
-       target="_blank" rel="noopener noreferrer">
-        Consulter l'alerte Cybermalveillance.gouv.fr ↗
-    </a>
+                    Il est donc essentiel de maintenir
+                    PHP à jour et d'appliquer
+                    les correctifs de sécurité.
+                </p>
 
-</article>
+                <a
+                    href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/alerte-cyber-failles-de-securite-critiques-dans-php-202610"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter l'alerte PHP ↗
+                </a>
 
+            </article>
 
-<article class="veille-card">
+            <!-- 5. WINDOWS -->
+            <article class="veille-card">
 
-    <h2>🪟 Les vulnérabilités Windows et Active Directory</h2>
+                <h2>🪟 Windows et Active Directory</h2>
 
-    <p>
-        Windows Server et Active Directory sont
-        largement utilisés dans les entreprises
-        pour administrer les ordinateurs,
-        les utilisateurs et les droits d'accès.
+                <p>
+                    Windows Server et Active Directory
+                    sont utilisés dans les entreprises
+                    pour administrer les ordinateurs,
+                    les utilisateurs et les droits d'accès.
 
-        Des vulnérabilités peuvent affecter
-        ces environnements et permettre,
-        selon les failles, une élévation
-        de privilèges, un accès non autorisé
-        ou une perturbation des services.
+                    Des failles de sécurité peuvent
+                    permettre des accès non autorisés
+                    ou une élévation de privilèges.
 
-        Il est donc important de suivre
-        les bulletins de sécurité Microsoft,
-        d'appliquer les correctifs et de
-        protéger les comptes administrateurs.
-    </p>
+                    Il est important de suivre
+                    les correctifs Microsoft et
+                    de sécuriser les comptes administrateurs.
+                </p>
 
-    <a href="https://msrc.microsoft.com/update-guide/fr-FR"
-       target="_blank" rel="noopener noreferrer">
-        Consulter les mises à jour de sécurité Microsoft ↗
-    </a>
+                <a
+                    href="https://msrc.microsoft.com/update-guide"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter les mises à jour Microsoft ↗
+                </a>
 
-    <p style="margin-top: 30px;">
-        Le CERT-FR publie également des avis
-        et des alertes sur les vulnérabilités
-        qui peuvent toucher les infrastructures
-        Windows. Ces publications permettent
-        de suivre les risques et les mesures
-        de protection recommandées.
-    </p>
+                <p class="source-suivante">
+                    Le CERT-FR publie également
+                    des avis et alertes concernant
+                    les vulnérabilités qui peuvent
+                    toucher les environnements Windows.
+                </p>
 
-    <a href="https://www.cert.ssi.gouv.fr/avis/"
-       target="_blank" rel="noopener noreferrer">
-        Consulter les avis du CERT-FR ↗
-    </a>
+                <a
+                    href="https://www.cert.ssi.gouv.fr/avis/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter les avis du CERT-FR ↗
+                </a>
 
-</article>
+            </article>
+
+            <!-- 6. PHISHING -->
+            <article class="veille-card">
+
+                <h2>🎣 Le phishing</h2>
+
+                <p>
+                    Le phishing, ou hameçonnage,
+                    consiste à tromper une personne
+                    pour lui faire communiquer
+                    des informations confidentielles.
+
+                    Les attaquants peuvent utiliser
+                    de faux e-mails, des SMS
+                    ou des sites imitant
+                    des services légitimes.
+
+                    La vigilance et la vérification
+                    des liens sont essentielles.
+                </p>
+
+                <a
+                    href="https://www.cybermalveillance.gouv.fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter les conseils de prévention ↗
+                </a>
+
+            </article>
+
+            <!-- 7. MFA -->
+            <article class="veille-card">
+
+                <h2>🔑 L'authentification multifacteur</h2>
+
+                <p>
+                    L'authentification multifacteur,
+                    appelée MFA, ajoute une protection
+                    supplémentaire aux comptes.
+
+                    Elle combine plusieurs éléments
+                    de vérification, par exemple
+                    un mot de passe et une validation
+                    sur un appareil.
+
+                    Elle contribue à réduire
+                    les risques d'accès non autorisé,
+                    même lorsqu'un mot de passe
+                    a été compromis.
+                </p>
+
+                <a
+                    href="https://www.cybermalveillance.gouv.fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter les bonnes pratiques ↗
+                </a>
+
+            </article>
+
+            <!-- 8. CLOUD -->
+            <article class="veille-card">
+
+                <h2>☁️ La sécurité du cloud</h2>
+
+                <p>
+                    Les services cloud permettent
+                    d'héberger des données,
+                    des applications et des serveurs
+                    à distance.
+
+                    Leur sécurité repose notamment
+                    sur la gestion des accès,
+                    la configuration des services,
+                    le chiffrement et la protection
+                    des informations sensibles.
+
+                    Les erreurs de configuration
+                    peuvent exposer des ressources.
+                </p>
+
+                <a
+                    href="https://cyber.gouv.fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter les ressources de l'ANSSI ↗
+                </a>
+
+            </article>
+
+            <!-- 9. PARE-FEU ET VPN -->
+            <article class="veille-card">
+
+                <h2>🌐 Les pare-feu et les VPN</h2>
+
+                <p>
+                    Les pare-feu permettent de contrôler
+                    les communications réseau selon
+                    des règles de sécurité.
+
+                    Les VPN peuvent sécuriser
+                    les connexions à distance.
+
+                    Ces équipements et services
+                    doivent être correctement configurés,
+                    surveillés et régulièrement mis à jour
+                    pour limiter les risques.
+                </p>
+
+                <a
+                    href="https://www.cert.ssi.gouv.fr/avis/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter les avis du CERT-FR ↗
+                </a>
+
+            </article>
+
+            <!-- 10. IA ET CYBERSÉCURITÉ -->
+            <article class="veille-card">
+
+                <h2>🤖 L'IA et la cybersécurité</h2>
+
+                <p>
+                    L'intelligence artificielle
+                    peut aider les équipes de sécurité
+                    à analyser des événements,
+                    détecter certaines anomalies
+                    et identifier des menaces.
+
+                    Cependant, elle peut également
+                    être détournée pour faciliter
+                    des tentatives de fraude
+                    ou produire des contenus trompeurs.
+
+                    Il est important de suivre
+                    ces évolutions et leurs risques.
+                </p>
+
+                <a
+                    href="https://www.enisa.europa.eu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter les ressources de l'ENISA ↗
+                </a>
+
+            </article>
 
         </div>
 
@@ -278,6 +491,7 @@
 
     <!-- ICÔNES LUCIDE -->
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+
     <script>
         if (window.lucide) {
             lucide.createIcons();
