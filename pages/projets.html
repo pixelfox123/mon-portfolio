@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mes projets | ITnéraire</title>
+
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
@@ -39,8 +41,16 @@
             border: 1px solid rgba(0, 234, 255, 0.3);
             border-radius: 18px;
             padding: 30px;
+
             box-shadow: 0 0 20px rgba(0, 234, 255, 0.07);
-            transition: transform 0.3s, border-color 0.3s;
+
+            transition:
+                transform 0.3s,
+                border-color 0.3s;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .projet-card:hover {
@@ -48,7 +58,7 @@
             border-color: #a855f7;
         }
 
-        .projet-card svg {
+        .projet-card > svg {
             width: 35px;
             height: 35px;
             color: #00eaff;
@@ -69,10 +79,45 @@
             display: inline-block;
             margin-top: 18px;
             padding: 6px 12px;
+
             border: 1px solid rgba(0, 234, 255, 0.45);
             border-radius: 20px;
+
             color: #00eaff;
             font-size: 0.85rem;
+        }
+
+        .projet-tag.a-venir {
+            border-color: rgba(168, 85, 247, 0.65);
+            color: #c084fc;
+        }
+
+        .projet-lien {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-top: auto;
+            padding-top: 22px;
+
+            color: #00eaff;
+            font-weight: bold;
+            text-decoration: none;
+
+            transition: color 0.3s;
+        }
+
+        .projet-lien:hover {
+            color: #c084fc;
+        }
+
+        .projet-lien svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .projet-card .projet-tag + .projet-lien {
+            margin-top: auto;
         }
 
         @media (max-width: 750px) {
@@ -86,35 +131,46 @@
 <body>
 
     <header class="navbar">
+
         <a href="../index.html" class="logo">
             <i data-lucide="monitor-code"></i>
-            <span class="logo-text"><strong>IT</strong>néraire</span>
+            <span class="logo-text">
+                <strong>IT</strong>néraire
+            </span>
         </a>
 
         <nav class="nav-links">
+
             <a href="../index.html">
-                <i data-lucide="house"></i> Accueil
+                <i data-lucide="house"></i>
+                Accueil
             </a>
 
             <a href="parcours.html">
-                <i data-lucide="user-round"></i> Mon parcours
+                <i data-lucide="user-round"></i>
+                Mon parcours
             </a>
 
             <a href="projets.html" class="active">
-                <i data-lucide="code-xml"></i> Mes projets
+                <i data-lucide="code-xml"></i>
+                Mes projets
             </a>
 
             <a href="laboratoire.html">
-                <i data-lucide="server"></i> Mon laboratoire
+                <i data-lucide="server"></i>
+                Mon laboratoire
             </a>
 
             <a href="veille.html">
-                <i data-lucide="shield-check"></i> Veille
+                <i data-lucide="shield-check"></i>
+                Veille
             </a>
 
             <a href="contact.html">
-                <i data-lucide="mail"></i> Contact
+                <i data-lucide="mail"></i>
+                Contact
             </a>
+
         </nav>
     </header>
 
@@ -124,80 +180,123 @@
 
         <p class="projets-intro">
             Cet espace présente mes réalisations
-            et les projets que je développe au fil
-            de ma formation en systèmes et réseaux.
+            personnelles et professionnelles,
+            ainsi que les projets que je pourrais
+            développer au fil de mon parcours.
         </p>
 
         <div class="projets-grid">
 
+            <!-- PROJET ITNERAIRE -->
             <article class="projet-card">
+
                 <i data-lucide="globe"></i>
+
                 <h2>ITnéraire</h2>
 
                 <p>
-                    Conception et développement de mon site
-                    professionnel pour présenter mon parcours,
-                    mes projets et ma veille technologique.
+                    ITnéraire est un site personnel
+                    et professionnel que j'ai imaginé
+                    et développé pour partager mon
+                    univers numérique, présenter
+                    mon parcours, mes réalisations
+                    et ma veille technologique.
                 </p>
 
                 <span class="projet-tag">
-                    HTML · CSS · JavaScript
+                    Projet réalisé · HTML · CSS · JavaScript
                 </span>
-                
-<a href="../projets/itneraire.html"
-   style="display:inline-block;
-          margin-top:20px;
-          color:#00eaff;
-          font-weight:bold;
-          text-decoration:none;">
-    Découvrir le projet ITnéraire ↗
-</a>
+
+                <a href="../projets/itneraire.html"
+                   class="projet-lien">
+                    Découvrir le projet ITnéraire
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
 
             </article>
 
+            <!-- INFRASTRUCTURE RESEAU -->
             <article class="projet-card">
+
                 <i data-lucide="network"></i>
-                <h2>Administration réseau</h2>
+
+                <h2>Infrastructure réseau</h2>
 
                 <p>
-                    Un espace pour présenter mes futurs
-                    travaux pratiques : adressage IP,
-                    configuration réseau et dépannage.
+                    Je n'ai pas encore eu l'occasion
+                    de réaliser un projet complet dans
+                    ce domaine en dehors de mes travaux
+                    pratiques. Cette rubrique pourra
+                    être enrichie au fil de mes expériences
+                    et de nouvelles opportunités.
                 </p>
 
-                <span class="projet-tag">
-                    Projets à documenter
+                <span class="projet-tag a-venir">
+                    Projet à venir
                 </span>
+
+                <a href="laboratoire.html"
+                   class="projet-lien">
+                    Découvrir mes TP réseaux
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
             </article>
 
+            <!-- SYSTEMES WINDOWS / LINUX -->
             <article class="projet-card">
+
                 <i data-lucide="server"></i>
-                <h2>Systèmes Windows et Linux</h2>
+
+                <h2>Systèmes Windows / Linux</h2>
 
                 <p>
-                    Je pourrai partager ici mes exercices
-                    d'installation, de configuration et
-                    d'administration de systèmes.
+                    Mes connaissances dans ce domaine
+                    se développent principalement
+                    à travers mes cours et mes travaux
+                    pratiques. Je souhaite pouvoir
+                    les mettre en application dans
+                    un projet plus complet à l'avenir.
                 </p>
 
-                <span class="projet-tag">
-                    Projets à documenter
+                <span class="projet-tag a-venir">
+                    Projet à venir
                 </span>
+
+                <a href="laboratoire.html"
+                   class="projet-lien">
+                    Découvrir mes TP systèmes
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
             </article>
 
+            <!-- CYBERSECURITE -->
             <article class="projet-card">
+
                 <i data-lucide="shield-check"></i>
+
                 <h2>Cybersécurité</h2>
 
                 <p>
-                    Cette section accueillera mes futurs
-                    travaux autour de la sécurisation
-                    des systèmes et des réseaux.
+                    La cybersécurité étant un domaine
+                    vers lequel je souhaite m'orienter,
+                    cette rubrique accueillera de futurs
+                    projets lorsque j'aurai l'occasion
+                    d'approfondir mes compétences
+                    et de les mettre en pratique.
                 </p>
 
-                <span class="projet-tag">
-                    À venir
+                <span class="projet-tag a-venir">
+                    Projet à venir
                 </span>
+
+                <a href="laboratoire.html"
+                   class="projet-lien">
+                    Découvrir mes TP sécurité
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
             </article>
 
         </div>
@@ -205,6 +304,7 @@
     </main>
 
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+
     <script>
         if (window.lucide) {
             lucide.createIcons();
