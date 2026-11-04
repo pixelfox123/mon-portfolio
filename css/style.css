@@ -852,3 +852,27 @@ a {
 .nav-links a:hover svg {
     color: #00eaff;
 }
+
+
+/* ========================================
+   BARRE DE NAVIGATION FIXE - ITnéraire
+======================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(3, 8, 23, 0.96);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(0, 234, 255, 0.5);
+    box-shadow: 0 3px 18px rgba(0, 234, 255, 0.12);
+}
+
+/* Empêche la barre de cacher le contenu */
+body {
+    padding-top: 85px;
+}
