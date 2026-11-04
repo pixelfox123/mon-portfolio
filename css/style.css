@@ -876,3 +876,35 @@ a {
 body {
     padding-top: 85px;
 }
+
+
+
+/* =========================================
+   MOBILE : TITRES VISIBLES SOUS LE MENU
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* On garde la navigation actuelle */
+    .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: auto;
+        z-index: 1000;
+    }
+
+    /* La navigation reste dans la page */
+    body {
+        padding-top: 0;
+    }
+
+    /* Un peu d'espace avant les titres */
+    .page-parcours,
+    .page-projets,
+    .page-labo,
+    .page-contact,
+    .veille-page {
+        padding-top: 35px;
+    }
+}
