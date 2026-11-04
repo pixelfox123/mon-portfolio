@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projet ITnéraire | ITnéraire</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .projet-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 65px 25px;
+        }
+
+        .projet-page h1 {
+            color: #00eaff;
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 2.7rem);
+            margin-bottom: 15px;
+        }
+
+        .projet-intro {
+            text-align: center;
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .projet-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(min(100%, 260px), 1fr)
+            );
+            gap: 25px;
+        }
+
+        .projet-card {
+            background: #071328;
+            border: 1px solid #00eaff55;
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 0 20px #00eaff15;
+        }
+
+        .projet-card h2 {
+            color: #a855f7;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .projet-card p,
+        .projet-card li {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .projet-card ul {
+            padding-left: 20px;
+        }
+
+        .projet-card a,
+        .retour-projets {
+            color: #00eaff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .projet-card a:hover,
+        .retour-projets:hover {
+            text-decoration: underline;
+        }
+
+        .projet-etapes {
+            margin-top: 25px;
+        }
+
+        .retour {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 768px) {
+            .projet-page {
+                padding: 35px 18px 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">
+            <i data-lucide="monitor-code"></i>
+            <span class="logo-text">
+                <strong>IT</strong>néraire
+            </span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="../index.html">
+                <i data-lucide="house"></i>
+                Accueil
+            </a>
+
+            <a href="../pages/parcours.html">
+                <i data-lucide="user-round"></i>
+                Mon parcours
+            </a>
+
+            <a href="../pages/projets.html" class="active">
+                <i data-lucide="code-xml"></i>
+                Mes projets
+            </a>
+
+            <a href="../pages/laboratoire.html">
+                <i data-lucide="server"></i>
+                Mon laboratoire
+            </a>
+
+            <a href="../pages/veille.html">
+                <i data-lucide="shield-check"></i>
+                Veille
+            </a>
+
+            <a href="../pages/contact.html">
+                <i data-lucide="mail"></i>
+                Contact
+            </a>
+        </nav>
+
+    </header>
+
+    <main class="projet-page">
+
+        <h1>🌐 ITnéraire — Mon site web</h1>
+
+        <p class="projet-intro">
+            ITnéraire est un site personnel
+            à vocation professionnelle que
+            j'ai créé pour présenter mon parcours,
+            mes réalisations, mon laboratoire
+            et ma veille technologique.
+        </p>
+
+        <div class="projet-grid">
+
+            <article class="projet-card">
+                <h2>🎯 Objectif du projet</h2>
+                <p>
+                    Concevoir un site web moderne,
+                    accessible sur ordinateur et
+                    sur téléphone, afin de présenter
+                    mes compétences et mon évolution
+                    dans les domaines des systèmes,
+                    des réseaux et de la cybersécurité.
+                </p>
+            </article>
+
+            <article class="projet-card">
+                <h2>💻 Technologies utilisées</h2>
+                <ul>
+                    <li>HTML : structure des pages</li>
+                    <li>CSS : design et adaptation mobile</li>
+                    <li>JavaScript : interactions</li>
+                    <li>VS Code : environnement de développement</li>
+                </ul>
+            </article>
+
+            <article class="projet-card">
+                <h2>🐙 Git et GitHub</h2>
+                <p>
+                    J'utilise Git pour suivre les
+                    modifications de mon projet
+                    et GitHub pour héberger
+                    mon dépôt de code source.
+                </p>
+                <p>
+                    Chaque nouvelle version est
+                    enregistrée avec un commit,
+                    puis envoyée vers GitHub
+                    grâce à la commande git push.
+                </p>
+                <a
+                    href="https://github.com/pixelfox123/mon-portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter le dépôt GitHub ↗
+                </a>
+            </article>
+
+            <article class="projet-card">
+                <h2>☁️ Cloudflare Pages</h2>
+                <p>
+                    Mon site est hébergé sur
+                    Cloudflare Pages, un service
+                    permettant de publier des
+                    sites web statiques.
+                </p>
+                <p>
+                    Le dépôt GitHub est connecté
+                    à Cloudflare Pages.
+                    Lorsqu'une nouvelle version
+                    est envoyée sur la branche main,
+                    un nouveau déploiement
+                    est automatiquement lancé.
+                </p>
+                <a
+                    href="https://itneraire.pages.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Voir le site en ligne ↗
+                </a>
+            </article>
+
+        </div>
+
+        <article class="projet-card projet-etapes">
+
+            <h2>🚀 Les étapes de réalisation</h2>
+
+            <ul>
+                <li>
+                    Création de la structure
+                    HTML des différentes pages.
+                </li>
+                <li>
+                    Personnalisation du design
+                    avec un thème futuriste
+                    cyan et violet.
+                </li>
+                <li>
+                    Adaptation de l'affichage
+                    aux écrans mobiles.
+                </li>
+                <li>
+                    Mise en place du suivi
+                    des modifications avec Git.
+                </li>
+                <li>
+                    Publication du code sur GitHub.
+                </li>
+                <li>
+                    Configuration du déploiement
+                    automatique avec Cloudflare Pages.
+                </li>
+            </ul>
+
+        </article>
+
+        <article class="projet-card projet-etapes">
+
+            <h2>🧠 Compétences développées</h2>
+
+            <p>
+                Ce projet m'a permis de pratiquer
+                le développement web,
+                l'organisation de fichiers,
+                l'utilisation de Git et GitHub,
+                ainsi que la mise en ligne
+                et la maintenance d'un site web.
+            </p>
+
+        </article>
+
+        <div class="retour">
+            <a
+                href="../pages/projets.html"
+                class="retour-projets"
+            >
+                ← Retour à mes projets
+            </a>
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>
