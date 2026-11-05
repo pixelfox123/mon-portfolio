@@ -10,7 +10,7 @@
 
     <style>
         .page-contact {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 65px 25px;
         }
@@ -33,11 +33,9 @@
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(
-                2,
-                minmax(0, 1fr)
-            );
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 25px;
+            align-items: stretch;
         }
 
         .contact-card {
@@ -95,6 +93,30 @@
             box-shadow: 0 0 20px #00eaff66;
         }
 
+        /* DISCORD */
+
+        .discord-card {
+            border-color: #a855f788;
+        }
+
+        .discord-icon {
+            color: #a855f7;
+        }
+
+        .discord-pseudo {
+            display: inline-block;
+            color: #00eaff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 10px 18px;
+            background: rgba(0, 234, 255, 0.06);
+            border: 1px solid #00eaff44;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* CV */
+
         .cv-card {
             margin-top: 25px;
             border-color: #a855f788;
@@ -110,6 +132,12 @@
             padding: 10px 18px;
         }
 
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
         @media (max-width: 768px) {
             .page-contact {
                 padding: 35px 18px 60px;
@@ -122,7 +150,19 @@
             .contact-card {
                 padding: 25px 18px;
             }
-        }
+        }*
+
+        .discord-qr {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
     </style>
 </head>
 
@@ -246,6 +286,55 @@
                     class="contact-button"
                 >
                     M'envoyer un e-mail ✉
+                </a>
+
+            </article>
+
+            <!-- DISCORD -->
+            <article class="contact-card discord-card">
+
+                <i
+                    data-lucide="message-circle"
+                    class="contact-icon discord-icon">
+                </i>
+
+                <h2>Discord</h2>
+
+                <p>
+                    Envie d'échanger autour
+                    de l'informatique,
+                    des projets IT ou simplement
+                    de discuter ?
+                    Retrouvez-moi sur Discord !
+                </p>
+
+                <div class="discord-pseudo">
+                    @sirazalee
+                </div>
+
+                <img
+    src="../images/qrcode-discord.png"
+    alt="QR code de mon profil Discord"
+    class="discord-qr"
+>
+
+<p>
+    Scannez le QR code pour
+    accéder à mon profil Discord.
+</p>
+
+                <p>
+                    Cliquez sur le bouton
+                    pour accéder à mon profil.
+                </p>
+
+                <a
+                    href="https://discord.com/users/1023961674811715624"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-button"
+                >
+                    Voir mon profil Discord ↗
                 </a>
 
             </article>
