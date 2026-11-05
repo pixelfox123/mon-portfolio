@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mes projets | ITnéraire</title>
-
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
@@ -36,49 +35,98 @@
             gap: 25px;
         }
 
+        /* STYLE COMMUN AUX CINQ CARTES */
+
         .projet-card {
-            background: rgba(7, 19, 40, 0.92);
-            border: 1px solid rgba(0, 234, 255, 0.3);
-            border-radius: 18px;
+            display: flex;
+            flex-direction: column;
             padding: 30px;
+            min-width: 0;
+
+            background: rgba(7, 19, 40, 0.92);
+            border: 1px solid rgba(168, 85, 247, 0.45);
+            border-radius: 18px;
 
             box-shadow: 0 0 20px rgba(0, 234, 255, 0.07);
 
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+
             transition:
                 transform 0.3s,
-                border-color 0.3s;
-
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+                border-color 0.3s,
+                box-shadow 0.3s;
         }
 
         .projet-card:hover {
             transform: translateY(-5px);
-            border-color: #a855f7;
+            border-color: #00eaff;
+            box-shadow: 0 0 25px rgba(0, 234, 255, 0.12);
         }
 
-        .projet-card > svg {
-            width: 35px;
-            height: 35px;
+        .projet-card:focus-visible {
+            outline: 2px solid #00eaff;
+            outline-offset: 4px;
+        }
+
+        .projet-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+
+        .projet-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 65px;
+            height: 65px;
+            flex-shrink: 0;
+
+            background: rgba(0, 234, 255, 0.08);
+            border: 1px solid rgba(0, 234, 255, 0.25);
+            border-radius: 15px;
+        }
+
+        .projet-icon svg {
+            width: 32px;
+            height: 32px;
             color: #00eaff;
-            margin-bottom: 15px;
         }
 
-        .projet-card h2 {
+        .projet-icon.discord {
+            background: #5865f2;
+            border-color: #5865f2;
+        }
+
+        .projet-icon.discord svg {
+            color: #ffffff;
+        }
+
+        .projet-header h2 {
             color: #a855f7;
-            margin-bottom: 15px;
+            margin: 0 0 6px;
+            font-size: 1.25rem;
         }
 
-        .projet-card p {
+        .projet-subtitle {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        .projet-description {
             color: #cbd5e1;
             line-height: 1.8;
+            margin-bottom: 18px;
         }
 
         .projet-tag {
             display: inline-block;
-            margin-top: 18px;
-            padding: 6px 12px;
+            align-self: flex-start;
+            padding: 7px 13px;
 
             border: 1px solid rgba(0, 234, 255, 0.45);
             border-radius: 20px;
@@ -92,32 +140,52 @@
             color: #c084fc;
         }
 
-        .projet-lien {
-            display: inline-flex;
+        .projet-details {
+            width: 100%;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(203, 213, 225, 0.2);
+        }
+
+        .projet-detail {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        .projet-detail strong {
+            color: #ffffff;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .projet-arrow {
+            display: flex;
+            justify-content: flex-end;
             align-items: center;
             gap: 8px;
 
+            width: 100%;
             margin-top: auto;
-            padding-top: 22px;
+            padding-top: 18px;
 
             color: #00eaff;
             font-weight: bold;
-            text-decoration: none;
-
-            transition: color 0.3s;
         }
 
-        .projet-lien:hover {
-            color: #c084fc;
+        .projet-arrow svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
         }
 
-        .projet-lien svg {
-            width: 18px;
-            height: 18px;
-        }
-
-        .projet-card .projet-tag + .projet-lien {
-            margin-top: auto;
+        .projet-card:hover .projet-arrow svg,
+        .projet-card:focus-visible .projet-arrow svg {
+            transform: translate(3px, -3px);
         }
 
         @media (max-width: 750px) {
@@ -125,10 +193,51 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        @media (max-width: 400px) {
+            .projet-header {
+                align-items: flex-start;
+            }
+
+            .projet-icon {
+                width: 52px;
+                height: 52px;
+            }
+
+            .projet-icon svg {
+                width: 27px;
+                height: 27px;
+            }
+
+            .projet-detail {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .projet-detail strong {
+                text-align: left;
+            }
+        }
+
+        .projet-icon.discord {
+    background: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.projet-icon.discord .discord-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
     </style>
 </head>
 
 <body>
+
+    <!-- BARRE DE NAVIGATION -->
 
     <header class="navbar">
 
@@ -187,14 +296,25 @@
 
         <div class="projets-grid">
 
-            <!-- PROJET ITNERAIRE -->
-            <article class="projet-card">
+            <!-- 1. ITNÉRAIRE -->
 
-                <i data-lucide="globe"></i>
+            <a href="../projets/itneraire.html"
+               class="projet-card">
 
-                <h2>ITnéraire</h2>
+                <div class="projet-header">
+                    <span class="projet-icon">
+                        <i data-lucide="globe"></i>
+                    </span>
 
-                <p>
+                    <div>
+                        <h2>ITnéraire</h2>
+                        <span class="projet-subtitle">
+                            Site personnel et professionnel
+                        </span>
+                    </div>
+                </div>
+
+                <p class="projet-description">
                     ITnéraire est un site personnel
                     et professionnel que j'ai imaginé
                     et développé pour partager mon
@@ -204,25 +324,112 @@
                 </p>
 
                 <span class="projet-tag">
-                    Projet réalisé · HTML · CSS · JavaScript
+                    Projet réalisé
                 </span>
 
-                <a href="../projets/itneraire.html"
-                   class="projet-lien">
-                    Découvrir le projet ITnéraire
+                <div class="projet-details">
+
+                    <div class="projet-detail">
+                        <span>Date</span>
+                        <strong>2026</strong>
+                    </div>
+
+                    <div class="projet-detail">
+                        <span>Type de projet</span>
+                        <strong>Personnel</strong>
+                    </div>
+
+                    <div class="projet-detail">
+                        <span>Technologies</span>
+                        <strong>HTML · CSS · JavaScript</strong>
+                    </div>
+
+                </div>
+
+                <span class="projet-arrow">
+                    Voir le projet
                     <i data-lucide="arrow-up-right"></i>
-                </a>
+                </span>
+            </a>
 
-            </article>
+            <!-- 2. DISCORD TSSR5 -->
 
-            <!-- INFRASTRUCTURE RESEAU -->
-            <article class="projet-card">
+            <a href="../projets/discord-tssr.html"
+               class="projet-card">
 
-                <i data-lucide="network"></i>
+                <div class="projet-header">
+                    <span class="projet-icon discord">
+    <img
+        src="../images/discord-logo-tssr5.png"
+        alt="Logo du serveur Discord TSSR5"
+        class="discord-logo"
+    >
+</span>
 
-                <h2>Infrastructure réseau</h2>
+                    <div>
+                        <h2>Serveur Discord — TSSR5</h2>
+                        <span class="projet-subtitle">
+                            Promotion 2025–2027
+                        </span>
+                    </div>
+                </div>
 
-                <p>
+                <p class="projet-description">
+                    En septembre 2025, j'ai créé
+                    un serveur Discord pour ma promotion
+                    TSSR afin de proposer un espace
+                    commun de communication, d'entraide
+                    et de partage de ressources.
+                </p>
+
+                <span class="projet-tag">
+                    Projet réalisé
+                </span>
+
+                <div class="projet-details">
+
+                    <div class="projet-detail">
+                        <span>Date</span>
+                        <strong>Septembre 2025</strong>
+                    </div>
+
+                    <div class="projet-detail">
+                        <span>Type de projet</span>
+                        <strong>Personnel / collaboratif</strong>
+                    </div>
+
+                    <div class="projet-detail">
+                        <span>Technologies</span>
+                        <strong>Discord · DraftBot</strong>
+                    </div>
+
+                </div>
+
+                <span class="projet-arrow">
+                    Voir le projet
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+            </a>
+
+            <!-- 3. INFRASTRUCTURE RÉSEAU -->
+
+            <a href="reseaux.html"
+               class="projet-card">
+
+                <div class="projet-header">
+                    <span class="projet-icon">
+                        <i data-lucide="network"></i>
+                    </span>
+
+                    <div>
+                        <h2>Infrastructure réseau</h2>
+                        <span class="projet-subtitle">
+                            Systèmes et réseaux
+                        </span>
+                    </div>
+                </div>
+
+                <p class="projet-description">
                     Je n'ai pas encore eu l'occasion
                     de réaliser un projet complet dans
                     ce domaine en dehors de mes travaux
@@ -235,22 +442,50 @@
                     Projet à venir
                 </span>
 
-                <a href="laboratoire.html"
-                   class="projet-lien">
-                    Découvrir mes TP réseaux
+                <div class="projet-details">
+
+                    <div class="projet-detail">
+                        <span>Date</span>
+                        <strong>À définir</strong>
+                    </div>
+
+                    <div class="projet-detail">
+                        <span>Type de projet</span>
+                        <strong>Projet futur</strong>
+                    </div>
+
+                    <div class="projet-detail">
+                        <span>Domaine</span>
+                        <strong>Réseaux</strong>
+                    </div>
+
+                </div>
+
+                <span class="projet-arrow">
+                    Voir mes TP réseaux
                     <i data-lucide="arrow-up-right"></i>
-                </a>
+                </span>
+            </a>
 
-            </article>
+            <!-- 4. SYSTÈMES WINDOWS / LINUX -->
 
-            <!-- SYSTEMES WINDOWS / LINUX -->
-            <article class="projet-card">
+            <a href="linux.html"
+               class="projet-card">
 
-                <i data-lucide="server"></i>
+                <div class="projet-header">
+                    <span class="projet-icon">
+                        <i data-lucide="server"></i>
+                    </span>
 
-                <h2>Systèmes Windows / Linux</h2>
+                    <div>
+                        <h2>Systèmes Windows / Linux</h2>
+                        <span class="projet-subtitle">
+                            Administration système
+                        </span>
+                    </div>
+                </div>
 
-                <p>
+                <p class="projet-description">
                     Mes connaissances dans ce domaine
                     se développent principalement
                     à travers mes cours et mes travaux
@@ -263,22 +498,50 @@
                     Projet à venir
                 </span>
 
-                <a href="laboratoire.html"
-                   class="projet-lien">
-                    Découvrir mes TP systèmes
+                <div class="projet-details">
+
+                    <div class="projet-detail">
+                        <span>Date</span>
+                        <strong>À définir</strong>
+                    </div>
+
+                    <div class="projet-detail">
+                        <span>Type de projet</span>
+                        <strong>Projet futur</strong>
+                    </div>
+
+                    <div class="projet-detail">
+                        <span>Domaine</span>
+                        <strong>Windows · Linux</strong>
+                    </div>
+
+                </div>
+
+                <span class="projet-arrow">
+                    Voir mes TP systèmes
                     <i data-lucide="arrow-up-right"></i>
-                </a>
+                </span>
+            </a>
 
-            </article>
+            <!-- 5. CYBERSÉCURITÉ -->
 
-            <!-- CYBERSECURITE -->
-            <article class="projet-card">
+            <a href="securite.html"
+               class="projet-card">
 
-                <i data-lucide="shield-check"></i>
+                <div class="projet-header">
+                    <span class="projet-icon">
+                        <i data-lucide="shield-check"></i>
+                    </span>
 
-                <h2>Cybersécurité</h2>
+                    <div>
+                        <h2>Cybersécurité</h2>
+                        <span class="projet-subtitle">
+                            Sécurité informatique
+                        </span>
+                    </div>
+                </div>
 
-                <p>
+                <p class="projet-description">
                     La cybersécurité étant un domaine
                     vers lequel je souhaite m'orienter,
                     cette rubrique accueillera de futurs
@@ -291,17 +554,36 @@
                     Projet à venir
                 </span>
 
-                <a href="laboratoire.html"
-                   class="projet-lien">
-                    Découvrir mes TP sécurité
-                    <i data-lucide="arrow-up-right"></i>
-                </a>
+                <div class="projet-details">
 
-            </article>
+                    <div class="projet-detail">
+                        <span>Date</span>
+                        <strong>À définir</strong>
+                    </div>
+
+                    <div class="projet-detail">
+                        <span>Type de projet</span>
+                        <strong>Projet futur</strong>
+                    </div>
+
+                    <div class="projet-detail">
+                        <span>Domaine</span>
+                        <strong>Cybersécurité</strong>
+                    </div>
+
+                </div>
+
+                <span class="projet-arrow">
+                    Voir mes TP sécurité
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+            </a>
 
         </div>
 
     </main>
+
+    <!-- ICÔNES LUCIDE -->
 
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
 

@@ -1,0 +1,709 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Serveur Discord TSSR5 | ITnéraire</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .page-discord {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 65px 25px 120px;
+        }
+
+        /* EN-TÊTE */
+
+        .projet-intro {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .discord-logo-principal {
+            display: block;
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            margin: 0 auto 20px;
+            border-radius: 22px;
+        }
+
+        .projet-intro h1 {
+            color: #00eaff;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 12px;
+        }
+
+        .projet-sous-titre {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .projet-statut {
+            display: inline-block;
+            color: #00eaff;
+            border: 1px solid rgba(0, 234, 255, 0.45);
+            border-radius: 25px;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+
+        /* SECTIONS */
+
+        .discord-section {
+            background: rgba(7, 19, 40, 0.92);
+            border: 1px solid rgba(168, 85, 247, 0.45);
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.06);
+        }
+
+        .discord-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #c084fc;
+            font-size: 1.45rem;
+            margin-bottom: 18px;
+        }
+
+        .discord-section h2 svg {
+            width: 25px;
+            height: 25px;
+            color: #00eaff;
+            flex-shrink: 0;
+        }
+
+        .discord-section p {
+            color: #cbd5e1;
+            line-height: 1.85;
+            margin-bottom: 14px;
+        }
+
+        .discord-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* INFORMATIONS */
+
+        .infos-projet {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+            margin-top: 22px;
+        }
+
+        .info-item {
+            background: rgba(0, 234, 255, 0.04);
+            border: 1px solid rgba(0, 234, 255, 0.18);
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .info-item span {
+            display: block;
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .info-item strong {
+            color: #ffffff;
+            font-size: 0.95rem;
+        }
+
+        /* CATÉGORIES */
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            margin-top: 22px;
+        }
+
+        .categorie-card {
+            background: rgba(12, 27, 53, 0.9);
+            border: 1px solid rgba(0, 234, 255, 0.16);
+            border-radius: 13px;
+            padding: 20px;
+        }
+
+        .categorie-card > svg {
+            width: 28px;
+            height: 28px;
+            color: #00eaff;
+            margin-bottom: 12px;
+        }
+
+        .categorie-card h3 {
+            color: #c084fc;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .categorie-card p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* CAPTURES D'ÉCRAN */
+
+        .captures-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .capture-card {
+            margin: 0;
+            background: #0c1b35;
+            border: 1px solid rgba(0, 234, 255, 0.2);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .capture-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 550px;
+            object-fit: contain;
+            background: #101218;
+        }
+
+        .capture-card figcaption {
+            padding: 15px;
+            color: #cbd5e1;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .capture-card.capture-large {
+            max-width: 800px;
+            margin: 20px auto 0;
+        }
+
+        .capture-large img {
+            max-height: none;
+        }
+
+        /* DRAFTBOT */
+
+        .bot-info {
+            background: rgba(12, 27, 53, 0.9);
+            border-left: 3px solid #818cf8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .bot-info h3 {
+            color: #c084fc;
+            margin-bottom: 12px;
+        }
+
+        .bot-info p {
+            margin-bottom: 10px;
+        }
+
+        .bot-role {
+            color: #00eaff;
+            font-weight: bold;
+        }
+
+        /* ACCÈS */
+
+        .acces-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            background: rgba(0, 234, 255, 0.05);
+            border: 1px solid rgba(0, 234, 255, 0.2);
+        }
+
+        .acces-info > svg {
+            width: 28px;
+            height: 28px;
+            color: #00eaff;
+            flex-shrink: 0;
+        }
+
+        .acces-info strong {
+            display: block;
+            color: #ffffff;
+            margin-bottom: 7px;
+        }
+
+        .acces-info p {
+            margin: 0;
+        }
+
+        /* BOUTON RETOUR */
+
+        .retour-projets {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 100;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 13px 18px;
+            background: #071328;
+            border: 1px solid #00eaff;
+            border-radius: 12px;
+
+            color: #00eaff;
+            font-weight: bold;
+            text-decoration: none;
+
+            box-shadow: 0 0 18px rgba(0, 234, 255, 0.12);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .retour-projets:hover {
+            background: #10243d;
+            transform: translateY(-3px);
+        }
+
+        .retour-projets:focus-visible {
+            outline: 2px solid #c084fc;
+            outline-offset: 4px;
+        }
+
+        .retour-projets svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 650px) {
+            .infos-projet,
+            .categories-grid,
+            .captures-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .discord-section {
+                padding: 23px;
+            }
+
+            .discord-section h2 {
+                font-size: 1.25rem;
+            }
+
+            .retour-projets {
+                bottom: 15px;
+                right: 15px;
+                padding: 11px 14px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">
+            <i data-lucide="monitor-code"></i>
+            <span class="logo-text">
+                <strong>IT</strong>néraire
+            </span>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="../index.html">
+                <i data-lucide="house"></i>
+                Accueil
+            </a>
+
+            <a href="../pages/parcours.html">
+                <i data-lucide="user-round"></i>
+                Mon parcours
+            </a>
+
+            <a href="../pages/projets.html" class="active">
+                <i data-lucide="code-xml"></i>
+                Mes projets
+            </a>
+
+            <a href="../pages/laboratoire.html">
+                <i data-lucide="server"></i>
+                Mon laboratoire
+            </a>
+
+            <a href="../pages/veille.html">
+                <i data-lucide="shield-check"></i>
+                Veille
+            </a>
+
+            <a href="../pages/contact.html">
+                <i data-lucide="mail"></i>
+                Contact
+            </a>
+
+        </nav>
+    </header>
+
+    <main class="page-discord">
+
+        <!-- EN-TÊTE DU PROJET -->
+
+        <div class="projet-intro">
+
+            <img
+                src="../images/discord-logo-tssr5.png"
+                alt="Logo du serveur TSSR5"
+                class="discord-logo-principal"
+            >
+
+            <h1>Création d'un serveur Discord</h1>
+
+            <p class="projet-sous-titre">
+                TSSR5 — Promotion 2025–2027
+            </p>
+
+            <span class="projet-statut">
+                Projet réalisé · Septembre 2025
+            </span>
+
+        </div>
+
+        <!-- PRÉSENTATION -->
+
+        <section class="discord-section">
+
+            <h2>
+                <i data-lucide="target"></i>
+                Présentation du projet
+            </h2>
+
+            <p>
+                En septembre 2025, j'ai créé un serveur
+                Discord destiné à ma promotion TSSR
+                2025–2027, par intérêt pour les outils
+                collaboratifs et l'organisation d'espaces
+                numériques.
+            </p>
+
+            <p>
+                L'objectif était de disposer d'un espace
+                commun pour faciliter les échanges,
+                permettre le partage d'informations
+                et de ressources entre camarades,
+                et encourager l'entraide.
+            </p>
+
+            <div class="infos-projet">
+
+                <div class="info-item">
+                    <span>Date de création</span>
+                    <strong>Septembre 2025</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Type de projet</span>
+                    <strong>Personnel / collaboratif</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Plateforme et outil</span>
+                    <strong>Discord · DraftBot</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ORGANISATION DU SERVEUR -->
+
+        <section class="discord-section">
+
+            <h2>
+                <i data-lucide="layout-grid"></i>
+                Organisation du serveur
+            </h2>
+
+            <p>
+                J'ai structuré le serveur en plusieurs
+                catégories et salons afin d'organiser
+                les échanges selon les besoins
+                de la promotion.
+            </p>
+
+            <div class="categories-grid">
+
+                <div class="categorie-card">
+                    <i data-lucide="graduation-cap"></i>
+                    <h3>Formation</h3>
+                    <p>
+                        Règlement, annonces,
+                        planning, absences et retards.
+                    </p>
+                </div>
+
+                <div class="categorie-card">
+                    <i data-lucide="book-open"></i>
+                    <h3>Cours</h3>
+                    <p>
+                        Salons dédiés aux matières
+                        techniques : réseaux, Linux,
+                        Active Directory, Microsoft 365
+                        et autres sujets de formation.
+                        Des salons vocaux permettent
+                        aussi les échanges en groupe.
+                    </p>
+                </div>
+
+                <div class="categorie-card">
+                    <i data-lucide="file-check"></i>
+                    <h3>Examens</h3>
+                    <p>
+                        Informations sur les examens,
+                        fiches de révision, entraide
+                        et anciens sujets.
+                    </p>
+                </div>
+
+                <div class="categorie-card">
+                    <i data-lucide="message-circle"></i>
+                    <h3>Fun</h3>
+                    <p>
+                        Discussions générales,
+                        sorties, memes et gaming.
+                    </p>
+                </div>
+
+                <div class="categorie-card">
+                    <i data-lucide="compass"></i>
+                    <h3>Autres</h3>
+                    <p>
+                        Bons plans, projets personnels,
+                        recherches IT, veille technologique
+                        et entraide quotidienne.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- DEUX CAPTURES DES SALONS -->
+
+            <div class="captures-grid">
+
+                <figure class="capture-card">
+
+                    <img
+                        src="../images/discord-serveur.png"
+                        alt="Catégories Formation et Cours du serveur TSSR5"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Formation, Cours et salons vocaux
+                    </figcaption>
+
+                </figure>
+
+                <figure class="capture-card">
+
+                    <img
+                        src="../images/discord-salons.png"
+                        alt="Catégories Examens, Fun et Autres du serveur TSSR5"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Examens, Fun et Autres
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+        <!-- MISE EN PLACE DE DRAFTBOT -->
+
+        <section class="discord-section">
+
+            <h2>
+                <i data-lucide="bot"></i>
+                Mise en place de DraftBot
+            </h2>
+
+            <p>
+                J'ai configuré DraftBot pour afficher
+                un message de bienvenue et présenter
+                le règlement du serveur aux nouveaux
+                membres.
+            </p>
+
+            <p>
+                Ce message contient un bouton
+                interactif « Accepter le règlement ».
+                Lorsqu'un membre clique dessus,
+                DraftBot lui attribue automatiquement
+                le rôle
+                <span class="bot-role">
+                    « membre règlement »
+                </span>.
+            </p>
+
+            <div class="bot-info">
+
+                <h3>Fonctionnement du bot</h3>
+
+                <p>
+                    Le membre rejoint le serveur,
+                    consulte le message de bienvenue,
+                    puis peut accepter le règlement
+                    à l'aide du bouton prévu.
+                </p>
+
+                <p>
+                    L'attribution automatique du rôle
+                    permet de distinguer les membres
+                    ayant accepté le règlement
+                    et d'automatiser cette étape
+                    de l'accueil.
+                </p>
+
+            </div>
+
+            <figure class="capture-card capture-large">
+
+                <img
+                    src="../images/discord-draftbot.png"
+                    alt="Message de bienvenue DraftBot avec le bouton Accepter le règlement"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Message de bienvenue, règlement
+                    et bouton d'acceptation DraftBot
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+        <!-- GESTION DES INVITATIONS ET DES ACCÈS -->
+
+        <section class="discord-section">
+
+            <h2>
+                <i data-lucide="lock-keyhole"></i>
+                Gestion des invitations et des accès
+            </h2>
+
+            <p>
+                Le serveur TSSR5 est configuré
+                en mode privé, avec un accès
+                sur invitation uniquement.
+            </p>
+
+            <p>
+                Les nouveaux membres doivent disposer
+                d'un lien d'invitation pour rejoindre
+                l'espace de la promotion.
+            </p>
+
+            <div class="acces-info">
+
+                <i data-lucide="lock"></i>
+
+                <div>
+                    <strong>
+                        Serveur privé — Sur invitation uniquement
+                    </strong>
+
+                    <p>
+                        Les invitations permettent
+                        de rejoindre le serveur.
+                        L'acceptation du règlement
+                        est ensuite gérée séparément
+                        grâce à DraftBot.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BILAN DU PROJET -->
+
+        <section class="discord-section">
+
+            <h2>
+                <i data-lucide="chart-no-axes-column"></i>
+                Bilan du projet
+            </h2>
+
+            <p>
+                Aujourd'hui, le serveur est principalement
+                utilisé pour discuter entre camarades,
+                avec quelques partages ponctuels
+                de ressources.
+            </p>
+
+            <p>
+                Même si son utilisation est surtout
+                orientée vers les échanges quotidiens,
+                il constitue un espace commun
+                pour la promotion.
+            </p>
+
+            <p>
+                Ce projet m'a permis de mettre en pratique
+                mon intérêt pour la création et
+                l'organisation d'un espace collaboratif,
+                de découvrir les paramètres d'accès
+                d'un serveur Discord et de configurer
+                un bot pour automatiser une partie
+                de l'accueil des membres.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- BOUTON FLOTTANT RETOUR -->
+
+    <a href="../pages/projets.html"
+       class="retour-projets">
+
+        <i data-lucide="arrow-left"></i>
+        Retour aux projets
+
+    </a>
+
+    <!-- ICÔNES LUCIDE -->
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>
